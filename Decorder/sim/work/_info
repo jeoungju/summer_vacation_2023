@@ -1,0 +1,100 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Modelsim\summer_project\sim
+vand_gate
+Z1 !s100 SQ4HmmDXRODLG5<UdHkiM0
+Z2 I<c1S55TaaQRgm@i2Sh1=o3
+Z3 VbT649VA`UFf?oDBHPfmHC0
+Z4 dD:\Modelsim\summer_project\sim
+Z5 w1688361711
+Z6 8../src/rtl/and_gate.v
+Z7 F../src/rtl/and_gate.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s108 1688362301.008000
+Z10 !s107 ../testbench/testbench2.v|../src/rtl/and_gate.v|
+Z11 !s90 -reportprogress|300|-f|run.f|
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vdecorder
+!i10b 1
+!s100 GI5X^;bHTi7Ic^Q[V5dO?3
+IC?zT>Q2zI6eL<zQ?O6>Ki1
+V64FS3<zXCakz7ebUdoklW3
+Z12 dD:\summer_vacation_2023\Decorder\sim
+w1688374253
+8../src/rtl/decorder.v
+F../src/rtl/decorder.v
+L0 1
+R8
+r1
+!s85 0
+31
+Z13 !s108 1688374385.343000
+Z14 !s107 ../testbench/testbench.v|../src/rtl/decorder.v|
+R11
+!s101 -O0
+o-O0
+vnot_gate
+Z15 !s100 dCHXiF5jP@dLHfb51T5J_0
+Z16 IkcZ[nB4gJOQB6:iAH`1Bf0
+Z17 V4E4EDUVNdKMQmHPAFP[A_2
+Z18 dD:\summer_vacation_2023\AND_GATE\sim
+Z19 w1688361288
+Z20 8../src/rtl/not_gate.v
+Z21 F../src/rtl/not_gate.v
+L0 1
+R8
+r1
+31
+Z22 !s108 1688364256.165000
+Z23 !s107 ../testbench/testbench.v|../src/rtl/not_gate.v|
+R11
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench
+!i10b 1
+!s100 T5dP6?eE^SGO?JVfl^P6?2
+I1:B0?TV:5SSjz7^X08iM93
+Z24 VhGfW:390DM[oDMzegDH9`2
+R12
+w1688374359
+Z25 8../testbench/testbench.v
+Z26 F../testbench/testbench.v
+L0 1
+R8
+r1
+!s85 0
+31
+R13
+R14
+R11
+!s101 -O0
+o-O0
+vtestbench2
+Z27 Il66WVF=_G5LVB]zU2[3FX0
+Z28 V<WjIFPfEhdLN6;1kTlCRZ3
+R4
+Z29 w1688362292
+Z30 8../testbench/testbench2.v
+Z31 F../testbench/testbench2.v
+L0 2
+R8
+r1
+31
+R9
+R10
+R11
+o-O0
+Z32 !s100 ;37[ILo<a^KBGS59oPS3V3
+!i10b 1
+!s85 0
+!s101 -O0
