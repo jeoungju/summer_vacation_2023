@@ -1,0 +1,119 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Modelsim\summer_project\sim
+vand_gate
+Z1 !s100 SQ4HmmDXRODLG5<UdHkiM0
+Z2 I<c1S55TaaQRgm@i2Sh1=o3
+Z3 VbT649VA`UFf?oDBHPfmHC0
+Z4 dD:\Modelsim\summer_project\sim
+Z5 w1688361711
+Z6 8../src/rtl/and_gate.v
+Z7 F../src/rtl/and_gate.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s108 1688362301.008000
+Z10 !s107 ../testbench/testbench2.v|../src/rtl/and_gate.v|
+Z11 !s90 -reportprogress|300|-f|run.f|
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vbinary_counter
+!i10b 1
+!s100 2F4V@KbTfFIz@?3W4TjPO3
+I;kkZHDAL@IoEMidzBCgbK3
+V>eagA@^1e07ck=0jkNC2_1
+Z12 dD:\summer_vacation_2023\011_BINARY_COUNTER\sim
+w1688459308
+8../src/rtl/binary_counter.v
+F../src/rtl/binary_counter.v
+L0 2
+R8
+r1
+!s85 0
+31
+Z13 !s108 1688459548.527000
+Z14 !s107 ../testbench/testbench.v|../src/rtl/binary_counter.v|
+R11
+!s101 -O0
+o-O0
+vdecorder
+Z15 IC?zT>Q2zI6eL<zQ?O6>Ki1
+Z16 V64FS3<zXCakz7ebUdoklW3
+Z17 dD:\summer_vacation_2023\Decorder\sim
+Z18 w1688374253
+Z19 8../src/rtl/decorder.v
+Z20 F../src/rtl/decorder.v
+L0 1
+R8
+r1
+31
+Z21 !s108 1688374385.343000
+Z22 !s107 ../testbench/testbench.v|../src/rtl/decorder.v|
+R11
+o-O0
+!i10b 1
+Z23 !s100 GI5X^;bHTi7Ic^Q[V5dO?3
+!s85 0
+!s101 -O0
+vnot_gate
+Z24 !s100 dCHXiF5jP@dLHfb51T5J_0
+Z25 IkcZ[nB4gJOQB6:iAH`1Bf0
+Z26 V4E4EDUVNdKMQmHPAFP[A_2
+Z27 dD:\summer_vacation_2023\AND_GATE\sim
+Z28 w1688361288
+Z29 8../src/rtl/not_gate.v
+Z30 F../src/rtl/not_gate.v
+L0 1
+R8
+r1
+31
+Z31 !s108 1688364256.165000
+Z32 !s107 ../testbench/testbench.v|../src/rtl/not_gate.v|
+R11
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench
+!i10b 1
+!s100 Va_80E]dW@A?XTCD8IF181
+I`15hIE]>[IYm;XBFMz[aZ1
+Z33 VhGfW:390DM[oDMzegDH9`2
+R12
+w1688459504
+Z34 8../testbench/testbench.v
+Z35 F../testbench/testbench.v
+L0 2
+R8
+r1
+!s85 0
+31
+R13
+R14
+R11
+!s101 -O0
+o-O0
+vtestbench2
+Z36 Il66WVF=_G5LVB]zU2[3FX0
+Z37 V<WjIFPfEhdLN6;1kTlCRZ3
+R4
+Z38 w1688362292
+Z39 8../testbench/testbench2.v
+Z40 F../testbench/testbench2.v
+L0 2
+R8
+r1
+31
+R9
+R10
+R11
+o-O0
+Z41 !s100 ;37[ILo<a^KBGS59oPS3V3
+!i10b 1
+!s85 0
+!s101 -O0
