@@ -1,0 +1,119 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Modelsim\summer_project\sim
+vand_gate
+Z1 !s100 SQ4HmmDXRODLG5<UdHkiM0
+Z2 I<c1S55TaaQRgm@i2Sh1=o3
+Z3 VbT649VA`UFf?oDBHPfmHC0
+Z4 dD:\Modelsim\summer_project\sim
+Z5 w1688361711
+Z6 8../src/rtl/and_gate.v
+Z7 F../src/rtl/and_gate.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s108 1688362301.008000
+Z10 !s107 ../testbench/testbench2.v|../src/rtl/and_gate.v|
+Z11 !s90 -reportprogress|300|-f|run.f|
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vdecorder
+Z12 IC?zT>Q2zI6eL<zQ?O6>Ki1
+Z13 V64FS3<zXCakz7ebUdoklW3
+Z14 dD:\summer_vacation_2023\Decorder\sim
+Z15 w1688374253
+Z16 8../src/rtl/decorder.v
+Z17 F../src/rtl/decorder.v
+L0 1
+R8
+r1
+31
+Z18 !s108 1688374385.343000
+Z19 !s107 ../testbench/testbench.v|../src/rtl/decorder.v|
+R11
+o-O0
+Z20 !s100 GI5X^;bHTi7Ic^Q[V5dO?3
+!i10b 1
+!s85 0
+!s101 -O0
+vnot_gate
+Z21 !s100 dCHXiF5jP@dLHfb51T5J_0
+Z22 IkcZ[nB4gJOQB6:iAH`1Bf0
+Z23 V4E4EDUVNdKMQmHPAFP[A_2
+Z24 dD:\summer_vacation_2023\AND_GATE\sim
+Z25 w1688361288
+Z26 8../src/rtl/not_gate.v
+Z27 F../src/rtl/not_gate.v
+L0 1
+R8
+r1
+31
+Z28 !s108 1688364256.165000
+Z29 !s107 ../testbench/testbench.v|../src/rtl/not_gate.v|
+R11
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vsr
+!i10b 1
+Z30 !s100 XD>I6R4_McmZhBEH_fa^F2
+Z31 IU^_>3:<CR5OjTL]D3IYQ`2
+Z32 VnD^4Qz4Z<F<5^QmP8P0D;2
+Z33 dD:\summer_vacation_2023\006_SR_FF\sim
+Z34 w1688448946
+Z35 8../src/rtl/sr.v
+Z36 F../src/rtl/sr.v
+L0 1
+R8
+r1
+!s85 0
+31
+Z37 !s108 1688450423.190000
+Z38 !s107 ../testbench/testbench.v|../src/rtl/sr.v|
+R11
+!s101 -O0
+o-O0
+vtestbench
+!i10b 1
+!s100 z2=7Ufk=`FkeGBzBY_K_a3
+ImGD[Rd6V<bP4om8LoS65Z3
+Z39 VhGfW:390DM[oDMzegDH9`2
+R33
+w1688450418
+Z40 8../testbench/testbench.v
+Z41 F../testbench/testbench.v
+L0 2
+R8
+r1
+!s85 0
+31
+R37
+R38
+R11
+!s101 -O0
+o-O0
+vtestbench2
+Z42 Il66WVF=_G5LVB]zU2[3FX0
+Z43 V<WjIFPfEhdLN6;1kTlCRZ3
+R4
+Z44 w1688362292
+Z45 8../testbench/testbench2.v
+Z46 F../testbench/testbench2.v
+L0 2
+R8
+r1
+31
+R9
+R10
+R11
+o-O0
+Z47 !s100 ;37[ILo<a^KBGS59oPS3V3
+!i10b 1
+!s85 0
+!s101 -O0
