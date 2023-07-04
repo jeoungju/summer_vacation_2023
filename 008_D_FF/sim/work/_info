@@ -1,0 +1,119 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Modelsim\summer_project\sim
+vand_gate
+Z1 !s100 SQ4HmmDXRODLG5<UdHkiM0
+Z2 I<c1S55TaaQRgm@i2Sh1=o3
+Z3 VbT649VA`UFf?oDBHPfmHC0
+Z4 dD:\Modelsim\summer_project\sim
+Z5 w1688361711
+Z6 8../src/rtl/and_gate.v
+Z7 F../src/rtl/and_gate.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s108 1688362301.008000
+Z10 !s107 ../testbench/testbench2.v|../src/rtl/and_gate.v|
+Z11 !s90 -reportprogress|300|-f|run.f|
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vd_ff
+!i10b 1
+Z12 !s100 ?zNMoa]dFljE<G07UjUkS3
+Z13 Ic2Yn[]cWXL^4`Nl6:^^W:2
+Z14 VGWWEVC]<AlDA6N;a8`diO0
+Z15 dD:\summer_vacation_2023\008_D_FF\sim
+Z16 w1688452532
+Z17 8../src/rtl/d_ff.v
+Z18 F../src/rtl/d_ff.v
+L0 1
+R8
+r1
+!s85 0
+31
+Z19 !s108 1688452594.920000
+Z20 !s107 ../testbench/testbench.v|../src/rtl/d_ff.v|
+R11
+!s101 -O0
+o-O0
+vdecorder
+Z21 IC?zT>Q2zI6eL<zQ?O6>Ki1
+Z22 V64FS3<zXCakz7ebUdoklW3
+Z23 dD:\summer_vacation_2023\Decorder\sim
+Z24 w1688374253
+Z25 8../src/rtl/decorder.v
+Z26 F../src/rtl/decorder.v
+L0 1
+R8
+r1
+31
+Z27 !s108 1688374385.343000
+Z28 !s107 ../testbench/testbench.v|../src/rtl/decorder.v|
+R11
+o-O0
+Z29 !s100 GI5X^;bHTi7Ic^Q[V5dO?3
+!i10b 1
+!s85 0
+!s101 -O0
+vnot_gate
+Z30 !s100 dCHXiF5jP@dLHfb51T5J_0
+Z31 IkcZ[nB4gJOQB6:iAH`1Bf0
+Z32 V4E4EDUVNdKMQmHPAFP[A_2
+Z33 dD:\summer_vacation_2023\AND_GATE\sim
+Z34 w1688361288
+Z35 8../src/rtl/not_gate.v
+Z36 F../src/rtl/not_gate.v
+L0 1
+R8
+r1
+31
+Z37 !s108 1688364256.165000
+Z38 !s107 ../testbench/testbench.v|../src/rtl/not_gate.v|
+R11
+o-O0
+!i10b 1
+!s85 0
+!s101 -O0
+vtestbench
+!i10b 1
+!s100 >B46gn1FFYJ@TY<@cXX1K2
+IaL2gGac?AnaGMV4bTS]AF1
+Z39 VhGfW:390DM[oDMzegDH9`2
+R15
+w1688452592
+Z40 8../testbench/testbench.v
+Z41 F../testbench/testbench.v
+L0 2
+R8
+r1
+!s85 0
+31
+R19
+R20
+R11
+!s101 -O0
+o-O0
+vtestbench2
+Z42 Il66WVF=_G5LVB]zU2[3FX0
+Z43 V<WjIFPfEhdLN6;1kTlCRZ3
+R4
+Z44 w1688362292
+Z45 8../testbench/testbench2.v
+Z46 F../testbench/testbench2.v
+L0 2
+R8
+r1
+31
+R9
+R10
+R11
+o-O0
+Z47 !s100 ;37[ILo<a^KBGS59oPS3V3
+!i10b 1
+!s85 0
+!s101 -O0
