@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\summer_vacation_2023\015_PARITY_CHECK\sim
+vparity
+!i10b 1
+!s100 BRhEaR6i7O2?WndFZz5K10
+IU`l`bE7^RF8?05VeRf3o23
+Z1 V0U_zkhJe7W95KKPaN9AQj0
+Z2 dD:\summer_vacation_2023\015_PARITY_CHECK\sim
+w1688532158
+Z3 8../src/rtl/parity.v
+Z4 F../src/rtl/parity.v
+L0 3
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1688532164.522000
+Z7 !s107 ../testbench/testbench.v|../src/rtl/parity.v|
+Z8 !s90 -reportprogress|300|-f|run.f|
+!s101 -O0
+o-O0
+vtestbench
+!i10b 1
+Z9 !s100 XmA5LB]nF99ZK8U]I=Zi^1
+Z10 Ie]_<1:IZMb6=bXUY`YHH[1
+Z11 VhGfW:390DM[oDMzegDH9`2
+R2
+Z12 w1688531983
+Z13 8../testbench/testbench.v
+Z14 F../testbench/testbench.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+o-O0
