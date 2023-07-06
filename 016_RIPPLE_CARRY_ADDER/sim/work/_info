@@ -1,0 +1,140 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\summer_vacation_2023\016_RIPPLE_CARRY_ADDER\sim
+vF_A
+!i10b 1
+Z1 !s100 RUl_H6e]<9S]W0E^ekhV13
+Z2 IScd4X6`zdU7PVT_KJhEY50
+Z3 V;H[EX`2ES9mai0k26XL^=1
+Z4 dD:\summer_vacation_2023\016_RIPPLE_CARRY_ADDER\sim
+Z5 w1688607164
+Z6 8../src/rtl/F_A.v
+Z7 F../src/rtl/F_A.v
+L0 3
+Z8 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z9 !s108 1688607538.172000
+Z10 !s107 ../testbench/testbench.v|../src/rtl/rca_32bit.v|../src/rtl/rca_16bit.v|../src/rtl/rca_8bit.v|../src/rtl/rca_4bit.v|../src/rtl/H_A.v|../src/rtl/F_A.v|
+Z11 !s90 -reportprogress|300|-f|run.f|
+!s101 -O0
+o-O0
+Z12 n@f_@a
+vH_A
+!i10b 1
+Z13 !s100 =Wc<H@A6WJ<ai?c31=4al2
+Z14 I1bSRiF_GQVgdM;<HLJ2Co1
+Z15 VNLTA=5EDJo76S:6B51aXJ3
+R4
+Z16 w1688607148
+Z17 8../src/rtl/H_A.v
+Z18 F../src/rtl/H_A.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+Z19 n@h_@a
+vrca_16bit
+!i10b 1
+Z20 !s100 h]hJn^0X1L1W3Q;CglEbl1
+Z21 I`OkEa`jf;lfG98RIac2NV2
+Z22 V=5E3PAecoPRab@OL9=bFb3
+R4
+Z23 w1688607433
+Z24 8../src/rtl/rca_16bit.v
+Z25 F../src/rtl/rca_16bit.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vrca_32bit
+!i10b 1
+Z26 !s100 _^PEa20n85V1RTIbWlU3o1
+Z27 IzDjIOFUSF]5=HHcFlYJXj3
+Z28 VeZidTNabMkI9TkIY:6CMa0
+R4
+Z29 w1688607447
+Z30 8../src/rtl/rca_32bit.v
+Z31 F../src/rtl/rca_32bit.v
+L0 81
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vrca_4bit
+!i10b 1
+Z32 !s100 QzI>M`O8HU]BGMYXVS<Df2
+Z33 IfM7DSBTk8IKnzMcD?CahA1
+Z34 Vm61h@FeLRj8RLXD[T7XPE2
+R4
+Z35 w1688607431
+Z36 8../src/rtl/rca_4bit.v
+Z37 F../src/rtl/rca_4bit.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vrca_8bit
+!i10b 1
+Z38 !s100 `WCI@S2iQdZEnBJekZQcY2
+Z39 I_dChN^C@m;C0C4Kdi5KIh0
+Z40 VLVaO<0lk@1cHKi?oBeQYi1
+R4
+Z41 w1688607428
+Z42 8../src/rtl/rca_8bit.v
+Z43 F../src/rtl/rca_8bit.v
+L0 3
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
+vtestbench
+!i10b 1
+!s100 EEmSamefUkO1@gS4c<klB2
+I>n^UlnMb1MGRkEoMbQN8[2
+Z44 VhGfW:390DM[oDMzegDH9`2
+R4
+w1688607534
+Z45 8../testbench/testbench.v
+Z46 F../testbench/testbench.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+o-O0
