@@ -7,7 +7,7 @@ module cla_32bit (
     output [31:0] sum,
     output c_out
 );
-    wire [6:0] c;
+    wire [6:0] c; //c[7] is c_out
 
     cla_4bit CLA00(.A(A[3:0]), .B(B[3:0]), .c_in(c_in), .sum(sum[3:0]), .c_out(c[0]));
     cla_4bit CLA01(.A(A[7:4]), .B(B[7:4]), .c_in(c[0]), .sum(sum[7:4]), .c_out(c[1]));

@@ -6,17 +6,10 @@ module full_adder (
     input B,
     input c_in,
     output sum,
-    output p,
-    output g
+    output g,
+    output p
 );
-    //wire sum_f;
-    wire c_f0, c_f1;
-
-    half_adder h01(
-        .A(A), .B(B), .c_out(c_f0)
-    );
-    half_adder h02(
-        .A(sum_f), .B(c_in), .c_out(c_f1)
-    );
-
+    assign sum = A ^ B ^ c_in;
+    assign g = A & B;
+    assign p = A ^ B;
 endmodule
