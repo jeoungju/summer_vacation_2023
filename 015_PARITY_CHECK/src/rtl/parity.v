@@ -15,9 +15,10 @@ module parity (
             even <= 1'b0;
         end
         else begin
-            even <= (data[0] == 1'b0) ? 1'b0 : 1'b1;
+            even <= data[0] ^ data[1] ^ data[2] ^ data[3] ^ data[4];
         end
     end
+
 
     always @(posedge clk or negedge n_rst) begin
         if (!n_rst) begin
