@@ -30,4 +30,5 @@ module parity (
     end
 
     assign even_parity = data_p;
+    
 endmodule
