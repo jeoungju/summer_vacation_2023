@@ -135,19 +135,19 @@ module booth (
     */
 
     localparam IDLE = 2'h0;
-    localparam CHECK = 2'h1;
-    localparam STOP = 2'h2;
+    localparam CHECK = 2'h1; //q[0],q0 compare
+    localparam STOP = 2'h2; //no use
 
     reg [5:0] A;
-    reg [2:0] count;
+    reg [2:0] count; //count is M, Q n bits
     reg [5:0] q;
     reg q0;
     wire [5:0] A_m_not;
     wire [5:0] A_m;
     wire [5:0] m_not;
-    assign A_m = A + M;
-    assign A_m_not = A + m_not;
-    assign m_not = ~M + 6'h01;
+    assign A_m = A + M; //for A + M
+    assign A_m_not = A + m_not; //for A - M
+    assign m_not = ~M + 6'h01; //M 2's complement
     reg [1:0] state, n_state;
     
 
