@@ -134,9 +134,8 @@ module booth (
     assign result = result_y;
     */
 
-    localparam IDLE = 2'h0;
-    localparam CHECK = 2'h1; //q[0],q0 compare
-    localparam STOP = 2'h2; //no use
+    localparam IDLE = 1'h0;
+    localparam CHECK = 1'h1; //q[0],q0 compare
 
     reg [5:0] A;
     reg [2:0] count; //count is M, Q n bits
@@ -148,7 +147,7 @@ module booth (
     assign A_m = A + M; //for A + M
     assign A_m_not = A + m_not; //for A - M
     assign m_not = ~M + 6'h01; //M 2's complement
-    reg [1:0] state, n_state;
+    reg state, n_state;
     
 
     always @(posedge clk or negedge n_rst) begin
@@ -163,8 +162,7 @@ module booth (
     always @(*)
         case(state)
             IDLE : n_state = (start == 1'b1) ? CHECK : state;
-            CHECK : n_state = (count == 3'h0) ? STOP : state;
-            STOP : n_state = IDLE;
+            CHECK : n_state = (count == 3'h0) ? IDLE : state;
             default : n_state = IDLE;
         endcase
 
@@ -176,12 +174,9 @@ module booth (
             if (state == IDLE) begin
                 A <= 6'h00;
             end
-            else if(state == CHECK) begin
+            else  begin
                 A <= (({q[0],q0}) == 2'b10) ? {A_m_not[5],A_m_not[5:1]} : 
                     (({q[0],q0}) == 2'b01) ? {A_m[5],A_m[5:1]} : {A[5],A[5:1]};
-            end
-            else begin
-                A <= A;
             end
         end
     end
