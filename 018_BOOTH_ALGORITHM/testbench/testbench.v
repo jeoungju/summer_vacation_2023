@@ -41,6 +41,22 @@ module testbench();
         start = 1'b0;
         #200;
 
+        M = 6'b100_000; //-32 holy shit..
+        Q = 6'b111_101; //-3
+        #20;
+        start = 1'b1;
+        #10;
+        start = 1'b0;
+        #200; //result -96
+
+        M = 6'b100_000; //-32 holy shit..
+        Q = 6'b000_011; //3 
+        #20;
+        start = 1'b1;
+        #10;
+        start = 1'b0;
+        #200; //result 96 
+
 
         $stop;
     end
