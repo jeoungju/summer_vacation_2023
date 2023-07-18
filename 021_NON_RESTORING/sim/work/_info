@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\summer_vacation_2023\021_NON_RESTORING\sim
+vdivider
+!i10b 1
+!s100 URS4]KHQ`h9;P^i6^8:]W3
+IekmSD1KIImZ@jEbUF:jFf3
+Z1 VEY3l1hzG]=h;>N<m@7hP]3
+Z2 dD:\summer_vacation_2023\021_NON_RESTORING\sim
+w1689674192
+Z3 8../src/rtl/divider.v
+Z4 F../src/rtl/divider.v
+L0 3
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1689674195.866000
+Z7 !s107 ../testbench/testbench.v|../src/rtl/divider.v|
+Z8 !s90 -reportprogress|300|-f|run.f|
+!s101 -O0
+o-O0
+vtestbench
+!i10b 1
+Z9 !s100 ?GfJkkYZ^M5i=JlY@lHgc2
+Z10 I8>oJILGkgCXYbl__]O;:U0
+Z11 VhGfW:390DM[oDMzegDH9`2
+R2
+Z12 w1689674143
+Z13 8../testbench/testbench.v
+Z14 F../testbench/testbench.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+o-O0
