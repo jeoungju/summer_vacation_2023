@@ -57,22 +57,32 @@ always @(posedge clk or negedge n_rst)
     if(!n_rst) begin
         fnd_rxd <= 8'h00; //fnd default data
     end
-    else if(rx_state == DATA && rxen == 1'b1) begin
+    else if (rx_state == DATA && rxen == 1'b1) begin
         fnd_rxd <= {rxd,fnd_rxd[7:1]};
+    end
+    else if (rx_state == IDLE) begin
+        fnd_rxd <= 8'h00;
     end
     else begin
         fnd_rxd <= fnd_rxd;
     end 
     
-
+    reg valid_sig_d;
     always @(posedge clk or negedge n_rst) begin
         if (!n_rst) begin
             valid_sig <= 1'b0;
+            valid_sig_d <= 1'b0;
         end
         else begin
             valid_sig <= (rx_state == STOP) ? 1'b1 : 1'b0;
+            valid_sig_d <= valid_sig;
         end
     end
+
+    wire valid_d_ff;
+    assign valid_d_ff = ((valid_sig == 1'b1) && (valid_sig_d == 1'b0)) ? 1'b1 : 1'b0;
+
     assign rx_data = fnd_rxd;
-    assign valid = valid_sig;
+    assign valid = valid_d_ff;
+
 endmodule
