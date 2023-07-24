@@ -2,23 +2,25 @@
 module testbench();
     reg clk;
     reg n_rst;
-    reg rxd;
-    reg [7:0] tx_data;
-    reg tx_valid;
+    reg [7:0] data;
+    reg valid;
 
-    wire [7:0] rx_data;
-    wire rx_valid;
-    wire txd;
+    wire [3:0] dtype;
+    wire [4:0] op;
+    wire [15:0] src1;
+    wire [15:0] src2;
+    wire done;
 
-    uart dut_uart (
+    decorder dut_decorder (
         .clk(clk),
         .n_rst(n_rst),
-        .rxd(rxd),
-        .tx_data(tx_data),
-        .tx_valid(tx_valid),
-        .rx_data(rx_data),
-        .rx_valid(rx_valid),
-        .txd(txd)
+        .data(data),
+        .valid(valid),
+        .dtype(dtype),
+        .op(op),
+        .src1(src1),
+        .src2(src2),
+        .done(done)
     );
 
     always #5 clk = ~clk;
@@ -29,42 +31,120 @@ module testbench();
     end
 
     initial begin
-        rxd = 1'b1;
-        tx_data = 8'h00;
-        tx_valid = 1'b0;
-        #102;
-        tx_data = 8'h53;
+        data = 8'h00;
+        valid = 1'b0;
+        #22;
+        data = 8'h48;
         #10;
-        tx_valid = 1'b1;
+        valid = 1'b1;
         #10;
-        tx_valid = 1'b0;
-        #3000;
-
-        //0x31
-        #150 rxd = 1'b0;
-        #150 rxd = 1'b1;
-        #150 rxd = 1'b0;
-        #150 rxd = 1'b0;
-        #150 rxd = 1'b0;
-        #150 rxd = 1'b1;
-        #150 rxd = 1'b1;
-        #150 rxd = 1'b0;
-        #150 rxd = 1'b0;
-        #150 rxd = 1'b1;
-        #1300;
-
-        //0x26
-        #160 rxd = 1'b0;
-        #160 rxd = 1'b0;
-        #160 rxd = 1'b1;
-        #160 rxd = 1'b1;
-        #160 rxd = 1'b0;
-        #160 rxd = 1'b0;
-        #160 rxd = 1'b1;
-        #160 rxd = 1'b0;
-        #160 rxd = 1'b0;
-        #160 rxd = 1'b1;
-        #1300;
+        valid = 1'b0;
+        #40;
+//real start
+        data = 8'h49;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//space
+        data = 8'h20;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//type
+        data = 8'h53;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//data1_space
+        data = 8'h20;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//d1_1
+        data = 8'h31;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//d1_7
+        data = 8'h37;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//d1_4
+        data = 8'h34;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//d1_9
+        data = 8'h39;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//op sub
+        data = 8'h2d;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//data_2 want 1248 d2_1
+        data = 8'h31;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//d2_2
+        data = 8'h32;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//d2_4
+        data = 8'h34;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//d2_8
+        data = 8'h38;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//equal state
+        data = 8'h2b;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #40;
+//equal = 3d
+        data = 8'h3d;
+        #10;
+        valid = 1'b1;
+        #10;
+        valid = 1'b0;
+        #100;
 
         $stop;
     end
