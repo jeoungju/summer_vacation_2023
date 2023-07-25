@@ -1,26 +1,25 @@
 `timescale 1ps/1ps
-module testbench();
+module testbench ();
     reg clk;
     reg n_rst;
-    reg [7:0] data;
-    reg valid;
+    reg [3:0] dtype;
+    reg [4:0] op;
+    reg [15:0] src1;
+    reg [15:0] src2;
+    reg done;
+    wire alu_done;
+    wire [31:0] result;
 
-    wire [3:0] dtype;
-    wire [4:0] op;
-    wire [15:0] src1;
-    wire [15:0] src2;
-    wire done;
-
-    decorder dut_decorder (
+    alu dut_alu (
         .clk(clk),
         .n_rst(n_rst),
-        .data(data),
-        .valid(valid),
         .dtype(dtype),
         .op(op),
         .src1(src1),
         .src2(src2),
-        .done(done)
+        .done(done),
+        .alu_done(alu_done),
+        .result(result)
     );
 
     always #5 clk = ~clk;
@@ -31,230 +30,35 @@ module testbench();
     end
 
     initial begin
-        data = 8'h00;
-        valid = 1'b0;
+        dtype = 4'h0;
+        op = 5'h00;
+        src1 = 16'h0000;
+        src2 = 16'h0000;
+        done = 1'b0;
         #22;
-        data = 8'h48;
+        /* divider 15 / 11 test
+        dtype = 4'h2;
+        src1 = 16'h000f;
+        src2 = 16'h000b;
         #10;
-        valid = 1'b1;
+        op = 5'h08;
+        #200;
+        */
+        /* signed multiplier 15 * -9
+        dtype = 4'h1;
+        src1 = 16'h000f;
+        src2 = 16'hfffa;
         #10;
-        valid = 1'b0;
-        #40;
-//real start
-        data = 8'h49;
+        op = 5'h04;
+        #200;
+        */
+        dtype = 4'h2;
+        src1 = 16'h000e;
+        src2 = 16'h000a;
         #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//space
-        data = 8'h20;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//type
-        data = 8'h53;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//data1_space
-        data = 8'h20;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d1_1
-        data = 8'h31;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d1_7
-        data = 8'h37;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d1_4
-        data = 8'h34;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d1_9
-        data = 8'h39;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//op sub
-        data = 8'h2d;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//data_2 want 1248 d2_1
-        data = 8'h31;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d2_2
-        data = 8'h32;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d2_4
-        data = 8'h34;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d2_8
-        data = 8'h38;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//equal state
-        data = 8'h2b;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//equal = 3d
-        data = 8'h3d;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #100;
-
-
-
-        //real start
-        data = 8'h49;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//space
-        data = 8'h20;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//type
-        data = 8'h57;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//data1_space
-        data = 8'h20;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d1_4
-        data = 8'h34;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d1_3
-        data = 8'h33;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d1_2
-        data = 8'h32;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d1_1
-        data = 8'h31;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//op divide
-        data = 8'h2f;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//data_2 want 1248 d2_1
-        data = 8'h39;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d2_8
-        data = 8'h38;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d2_2
-        data = 8'h32;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//d2_3
-        data = 8'h33;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//equal state
-        data = 8'h2b;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #40;
-//equal = 3d
-        data = 8'h3d;
-        #10;
-        valid = 1'b1;
-        #10;
-        valid = 1'b0;
-        #100;
+        op = 5'h04;
+        #200;
 
         $stop;
     end
-
 endmodule
