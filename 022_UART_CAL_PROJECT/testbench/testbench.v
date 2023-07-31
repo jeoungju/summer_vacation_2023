@@ -2,24 +2,14 @@
 module testbench ();
     reg clk;
     reg n_rst;
-    reg [3:0] dtype;
-    reg [4:0] op;
-    reg [15:0] src1;
-    reg [15:0] src2;
-    reg done;
-    wire alu_done;
-    wire [31:0] result;
+    reg rxd;
+    wire txd;
 
-    alu dut_alu (
+    top dut_top (
         .clk(clk),
         .n_rst(n_rst),
-        .dtype(dtype),
-        .op(op),
-        .src1(src1),
-        .src2(src2),
-        .done(done),
-        .alu_done(alu_done),
-        .result(result)
+        .rxd(rxd),
+        .txd(txd)
     );
 
     always #5 clk = ~clk;
@@ -30,35 +20,194 @@ module testbench ();
     end
 
     initial begin
-        dtype = 4'h0;
-        op = 5'h00;
-        src1 = 16'h0000;
-        src2 = 16'h0000;
-        done = 1'b0;
-        #22;
-        /* divider 15 / 11 test
-        dtype = 4'h2;
-        src1 = 16'h000f;
-        src2 = 16'h000b;
-        #10;
-        op = 5'h08;
-        #200;
-        */
-        /* signed multiplier 15 * -9
-        dtype = 4'h1;
-        src1 = 16'h000f;
-        src2 = 16'hfffa;
-        #10;
-        op = 5'h04;
-        #200;
-        */
-        dtype = 4'h2;
-        src1 = 16'h000e;
-        src2 = 16'h000a;
-        #10;
-        op = 5'h04;
-        #200;
+        rxd = 1'b1;
+
+        //0x49 //I
+        #57 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x20 //Space
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x53 //Signed
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x20 //Space
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x30 //0014
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x30 //0014
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x31 //0014
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x34 //0014
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+        
+        //0x2a //mul
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x30 //0004
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x30 //0004
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x30 //0004
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x34 //0004
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x3d //Equal
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #30000;
+
+        $stop;
 
         $stop;
     end
+
+
 endmodule

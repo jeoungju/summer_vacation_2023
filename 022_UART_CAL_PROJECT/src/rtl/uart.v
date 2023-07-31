@@ -7,7 +7,7 @@ module uart (
     output [7:0] rx_data,
     output rx_valid,
 
-    input [7:0] tx_data,
+    input [31:0] tx_data,
     output txd,
     input tx_valid
 );

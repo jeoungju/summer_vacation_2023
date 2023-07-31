@@ -104,6 +104,9 @@ module decorder (
         else if (state == TYPE) begin
             dtype_d <= (data == 8'h57) ? 4'h1 : 4'h2; // 8'h57 = Unsigned,4'h1  8'h53 = Signed,4'h2;
         end
+        else if (state == IDLE) begin
+            dtype_d <= 4'h0;
+        end
         else begin
             dtype_d <= dtype_d;
         end
@@ -123,17 +126,11 @@ module decorder (
                     (data == 8'h2a) ? 5'h04 :
                     (data == 8'h2f) ? 5'h08 : op_d;
         end
+        else if (state == IDLE) begin
+            op_d <= 5'h00;
+        end
         else begin
             op_d <= op_d;
-        end
-    end
-
-    always @(posedge clk or negedge n_rst) begin
-        if (!n_rst) begin
-            done_sig <= 1'b0;
-        end
-        else begin
-            done_sig <= (state == END_DATA) ? 1'b1 : 1'b0;
         end
     end
 

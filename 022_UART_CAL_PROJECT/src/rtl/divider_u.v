@@ -114,6 +114,19 @@ module divider_u (
 
     assign remain = result;
     assign quotient = q;
-    assign done = (count == 5'h1f) ? 1'b1 : 1'b0;
+    
+    wire done_sig;
+    assign done_sig = (count == 5'h1f) ? 1'b1 : 1'b0;
+    reg done_edge;
+    always @(posedge clk or negedge n_rst) begin
+        if (!n_rst) begin
+            done_edge <= 1'b0;
+        end
+        else begin
+            done_edge <= done_sig;
+        end
+    end
+
+    assign done = ((done_sig == 1'b1) && (done_edge == 1'b0)) ? 1'b1 : 1'b0;
 
 endmodule
