@@ -6,7 +6,8 @@ module booth_u (
     input [31:0] M,
     input [31:0] Q,
     input start,
-    output reg [63:0] result
+    output reg [63:0] result,
+    output done
 );
 
     localparam IDLE = 1'h0;
@@ -81,7 +82,7 @@ module booth_u (
                 q <= Q;
             end
             else begin
-                q <= {A[0],q[31:1]};
+                q <= ((q[0]) ==1'b1) ? {A_m[0],q[31:1]} : {A[0],q[31:1]};
             end
         end
     end
@@ -100,5 +101,5 @@ module booth_u (
         end
     end
 
-
+    assign done = (count == 6'h3f) ? 1'b1 : 1'b0;
 endmodule

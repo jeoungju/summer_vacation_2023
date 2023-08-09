@@ -6,6 +6,7 @@ module testbench();
     reg [31:0] Q;
     reg start;
     wire [63:0] result;
+    wire done;
 
     always #5 clk = ~clk;
 
@@ -16,6 +17,7 @@ module testbench();
     end
 
     initial begin //테스트 벡터
+    /*
         M = 32'h0000_0008; //8
         Q = 32'h0000_0014; //20
         start = 1'b0;
@@ -32,10 +34,12 @@ module testbench();
         #10;
         start = 1'b0;
         #350;
+        */
 
-        M = 32'h8000_8fd5; //-43
-        Q = 32'h8000_8003; //3
-        #20;
+        M = 32'h0000_0005; //-43
+        Q = 32'h0000_000f; //3
+        start = 1'b0;
+        #21;
         start = 1'b1;
         #10;
         start = 1'b0;
@@ -51,7 +55,8 @@ module testbench();
         .M(M),
         .Q(Q),
         .start(start),
-        .result(result)
+        .result(result),
+        .done(done)
     );
 
 endmodule
