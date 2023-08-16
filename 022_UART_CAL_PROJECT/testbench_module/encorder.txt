@@ -1,0 +1,47 @@
+`timescale 1ps/1ps
+module testbench ();
+    reg clk;
+    reg n_rst;
+    reg alu_done;
+    reg [31:0] result;
+
+    wire [7:0] uart_out;
+    wire uart_valid;
+
+    encorder dut_encorder(
+        .clk(clk),
+        .n_rst(n_rst),
+        .alu_done(alu_done),
+        .result(result),
+        .uart_out(uart_out),
+        .uart_valid(uart_valid)
+    );
+
+    always #5 clk = ~clk;
+    initial begin
+        clk = 1'b0;
+        n_rst = 1'b0;
+        #7 n_rst = 1'b1;
+    end
+
+    initial begin
+        alu_done = 1'b0;
+        result = 32'habcd_1234;
+        //txen = 1'b0; // cycles 160;
+        #27;
+        alu_done = 1'b1;
+        #10;
+        alu_done = 1'b0;
+        #1700;
+        result = 32'hfedc_5678;
+        #20;
+        alu_done = 1'b1;
+        #10;
+        alu_done = 1'b0;
+        #1700;
+
+
+
+        $stop;
+    end
+endmodule

@@ -7,7 +7,7 @@ entity uart is
         rxd             : in     vl_logic;
         rx_data         : out    vl_logic_vector(7 downto 0);
         rx_valid        : out    vl_logic;
-        tx_data         : in     vl_logic_vector(31 downto 0);
+        tx_data         : in     vl_logic_vector(7 downto 0);
         txd             : out    vl_logic;
         tx_valid        : in     vl_logic
     );

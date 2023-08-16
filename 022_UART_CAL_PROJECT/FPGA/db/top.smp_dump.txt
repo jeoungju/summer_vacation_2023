@@ -1,0 +1,32 @@
+
+State Machine - |top|encorder:dut_encorder|state
+Name state.UART_END state.UART_DATA state.UART_SHIFT state.IDLE state.UART_VALID 
+state.IDLE 0 0 0 0 0 
+state.UART_SHIFT 0 0 1 1 0 
+state.UART_DATA 0 1 0 1 0 
+state.UART_END 1 0 0 1 0 
+state.UART_VALID 0 0 0 1 1 
+
+State Machine - |top|decorder:d1|state
+Name state.END_DATA state.EQUAL state.DATA_2 state.OPERATION state.DATA_1 state.TYPE state.FORMAT state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.FORMAT 0 0 0 0 0 0 1 1 
+state.TYPE 0 0 0 0 0 1 0 1 
+state.DATA_1 0 0 0 0 1 0 0 1 
+state.OPERATION 0 0 0 1 0 0 0 1 
+state.DATA_2 0 0 1 0 0 0 0 1 
+state.EQUAL 0 1 0 0 0 0 0 1 
+state.END_DATA 1 0 0 0 0 0 0 1 
+
+State Machine - |top|uart:dut_uart|tx:dut_tx|tx_state
+Name tx_state.STOP tx_state.DATA tx_state.START tx_state.IDLE 
+tx_state.IDLE 0 0 0 0 
+tx_state.START 0 0 1 1 
+tx_state.DATA 0 1 0 1 
+tx_state.STOP 1 0 0 1 
+
+State Machine - |top|uart:dut_uart|rx:dut_rx|rx_state
+Name rx_state.IDLE rx_state.STOP rx_state.DATA 
+rx_state.IDLE 0 0 0 
+rx_state.DATA 1 0 1 
+rx_state.STOP 1 1 0 

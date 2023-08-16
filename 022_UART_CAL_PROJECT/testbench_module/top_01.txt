@@ -1,4 +1,4 @@
-20 x 4 signed multiplier testbench 첫번째 테벤
+//20 x 4 signed multiplier testbench 첫번째 테벤
 
 `timescale 1ps/1ps
 module testbench ();

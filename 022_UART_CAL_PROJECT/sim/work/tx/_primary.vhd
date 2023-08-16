@@ -5,7 +5,7 @@ entity tx is
         clk             : in     vl_logic;
         n_rst           : in     vl_logic;
         txen            : in     vl_logic;
-        tx_data         : in     vl_logic_vector(31 downto 0);
+        tx_data         : in     vl_logic_vector(7 downto 0);
         valid           : in     vl_logic;
         txd             : out    vl_logic
     );

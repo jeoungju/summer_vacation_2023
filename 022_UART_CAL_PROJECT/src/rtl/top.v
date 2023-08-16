@@ -13,8 +13,14 @@ module top (
     wire [15:0] src1;
     wire [15:0] src2;
     wire done;
+
+    //alu sig
     wire alu_done;
     wire [31:0] result;
+
+    //encorder sig
+    wire [7:0] uart_out;
+    wire uart_valid;
 
     uart dut_uart (
         .clk(clk),
@@ -22,12 +28,12 @@ module top (
         .rxd(rxd),
         .rx_data(rx_data),
         .rx_valid(rx_valid),
-        .tx_data(result),
+        .tx_data(uart_out),
         .txd(txd),
-        .tx_valid(alu_done)
+        .tx_valid(uart_valid)
     );
 
-    decorder dut_decorder (
+    decorder d1 (
         .clk(clk),
         .n_rst(n_rst),
         .data(rx_data),
@@ -50,5 +56,16 @@ module top (
         .alu_done(alu_done),
         .result(result)
     );
+
+    encorder dut_encorder (
+        .clk(clk),
+        .n_rst(n_rst),
+        .alu_done(alu_done),
+        .result(result),
+        .uart_out(uart_out),
+        .uart_valid(uart_valid)
+    );
+
+
 
 endmodule

@@ -1,0 +1,65 @@
+`timescale 1ps/1ps
+module testbench ();
+    reg clk;
+    reg n_rst;
+    reg [3:0] dtype;
+    reg [4:0] op;
+    reg [15:0] src1;
+    reg [15:0] src2;
+    reg start;
+    wire alu_done;
+    wire [31:0] result;
+
+    alu dut_alu (
+        .clk(clk),
+        .n_rst(n_rst),
+        .dtype(dtype),
+        .op(op),
+        .src1(src1),
+        .src2(src2),
+        .start(start),
+        .alu_done(alu_done),
+        .result(result)
+    );
+
+    always #5 clk = ~clk;
+    initial begin
+        clk = 1'b0;
+        n_rst = 1'b0;
+        #7 n_rst = 1'b1;
+    end
+
+    initial begin
+        dtype = 4'h0;
+        op = 5'h00;
+        src1 = 16'h0000;
+        src2 = 16'h0000;
+        start = 1'b0;
+        #22;
+        /* divider 15 / 11 test
+        dtype = 4'h2;
+        src1 = 16'h000f;
+        src2 = 16'h000b;
+        #10;
+        op = 5'h08;
+        #200;
+        */
+        /* signed multiplier 15 * -9
+        dtype = 4'h1;
+        src1 = 16'h000f;
+        src2 = 16'hfffa;
+        #10;
+        op = 5'h04;
+        #200;
+        */
+        dtype = 4'h2;
+        src1 = 16'h000e;
+        src2 = 16'h000a;
+        #10;
+        op = 5'h01;
+        start = 1'b1;
+        #200;
+
+        $stop;
+    end
+endmodule

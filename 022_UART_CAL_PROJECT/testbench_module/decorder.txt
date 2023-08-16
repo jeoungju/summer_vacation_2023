@@ -68,8 +68,8 @@ module testbench();
         #10;
         valid = 1'b0;
         #40;
-//d1_1
-        data = 8'h31;
+//d1_a
+        data = 8'h61;
         #10;
         valid = 1'b1;
         #10;
@@ -96,8 +96,8 @@ module testbench();
         #10;
         valid = 1'b0;
         #40;
-//op sub
-        data = 8'h2d;
+//op mul
+        data = 8'h2a;
         #10;
         valid = 1'b1;
         #10;
@@ -124,8 +124,8 @@ module testbench();
         #10;
         valid = 1'b0;
         #40;
-//d2_8
-        data = 8'h38;
+//d2_c
+        data = 8'h63;
         #10;
         valid = 1'b1;
         #10;
