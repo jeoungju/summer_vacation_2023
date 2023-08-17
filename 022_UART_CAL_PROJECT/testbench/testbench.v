@@ -50,11 +50,11 @@ module testbench ();
         #160 rxd = 1'b1;
         //#300;
 
-        //0x53 //unSigned
+        //0x53 //Signed
         #160 rxd = 1'b0;
         #160 rxd = 1'b1;
         #160 rxd = 1'b1;
-        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
         #160 rxd = 1'b0;
         #160 rxd = 1'b1;
         #160 rxd = 1'b0;
@@ -128,11 +128,11 @@ module testbench ();
         #160 rxd = 1'b1;
         //#300;
         
-        //0x2b //add
+        //0x2b //add //div
         #160 rxd = 1'b0;
         #160 rxd = 1'b1;
         #160 rxd = 1'b1;
-        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
         #160 rxd = 1'b1;
         #160 rxd = 1'b0;
         #160 rxd = 1'b1;
@@ -141,6 +141,58 @@ module testbench ();
         #160 rxd = 1'b1;
         //#300;
 
+        //0x66 f
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x66 f
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+        //0x66 f
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+
+       //0x35 5
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b1;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
+        //#300;
+/*
         //0x30 //0004
         #160 rxd = 1'b0;
         #160 rxd = 1'b0;
@@ -183,7 +235,7 @@ module testbench ();
         //0x34 //0004
         #160 rxd = 1'b0;
         #160 rxd = 1'b0;
-        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
         #160 rxd = 1'b1;
         #160 rxd = 1'b0;
         #160 rxd = 1'b1;
@@ -192,7 +244,7 @@ module testbench ();
         #160 rxd = 1'b0;
         #160 rxd = 1'b1;
         //#300;
-
+*/
         //0x3d //Equal
         #160 rxd = 1'b0;
         #160 rxd = 1'b1;
@@ -313,10 +365,10 @@ module testbench ();
         #160 rxd = 1'b1;
         //#300;
         
-        //0x2d //sub
+        //0x2d //sub //div 2f
         #160 rxd = 1'b0;
         #160 rxd = 1'b1;
-        #160 rxd = 1'b0;
+        #160 rxd = 1'b1;
         #160 rxd = 1'b1;
         #160 rxd = 1'b1;
         #160 rxd = 1'b0;

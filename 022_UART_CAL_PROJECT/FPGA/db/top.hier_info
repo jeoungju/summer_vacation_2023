@@ -1273,108 +1273,7 @@ din => next_state.DATAA
 dout <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-A[8] => A[8].IN1
-A[9] => A[9].IN1
-A[10] => A[10].IN1
-A[11] => A[11].IN1
-A[12] => A[12].IN1
-A[13] => A[13].IN1
-A[14] => A[14].IN1
-A[15] => A[15].IN1
-A[16] => A[16].IN1
-A[17] => A[17].IN1
-A[18] => A[18].IN1
-A[19] => A[19].IN1
-A[20] => A[20].IN1
-A[21] => A[21].IN1
-A[22] => A[22].IN1
-A[23] => A[23].IN1
-A[24] => A[24].IN1
-A[25] => A[25].IN1
-A[26] => A[26].IN1
-A[27] => A[27].IN1
-A[28] => A[28].IN1
-A[29] => A[29].IN1
-A[30] => A[30].IN1
-A[31] => A[31].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-B[8] => B[8].IN1
-B[9] => B[9].IN1
-B[10] => B[10].IN1
-B[11] => B[11].IN1
-B[12] => B[12].IN1
-B[13] => B[13].IN1
-B[14] => B[14].IN1
-B[15] => B[15].IN1
-B[16] => B[16].IN1
-B[17] => B[17].IN1
-B[18] => B[18].IN1
-B[19] => B[19].IN1
-B[20] => B[20].IN1
-B[21] => B[21].IN1
-B[22] => B[22].IN1
-B[23] => B[23].IN1
-B[24] => B[24].IN1
-B[25] => B[25].IN1
-B[26] => B[26].IN1
-B[27] => B[27].IN1
-B[28] => B[28].IN1
-B[29] => B[29].IN1
-B[30] => B[30].IN1
-B[31] => B[31].IN1
-c_in => c_in.IN1
-sum[0] <= cla_16bit:CLA00.sum
-sum[1] <= cla_16bit:CLA00.sum
-sum[2] <= cla_16bit:CLA00.sum
-sum[3] <= cla_16bit:CLA00.sum
-sum[4] <= cla_16bit:CLA00.sum
-sum[5] <= cla_16bit:CLA00.sum
-sum[6] <= cla_16bit:CLA00.sum
-sum[7] <= cla_16bit:CLA00.sum
-sum[8] <= cla_16bit:CLA00.sum
-sum[9] <= cla_16bit:CLA00.sum
-sum[10] <= cla_16bit:CLA00.sum
-sum[11] <= cla_16bit:CLA00.sum
-sum[12] <= cla_16bit:CLA00.sum
-sum[13] <= cla_16bit:CLA00.sum
-sum[14] <= cla_16bit:CLA00.sum
-sum[15] <= cla_16bit:CLA00.sum
-sum[16] <= cla_16bit:CLA01.sum
-sum[17] <= cla_16bit:CLA01.sum
-sum[18] <= cla_16bit:CLA01.sum
-sum[19] <= cla_16bit:CLA01.sum
-sum[20] <= cla_16bit:CLA01.sum
-sum[21] <= cla_16bit:CLA01.sum
-sum[22] <= cla_16bit:CLA01.sum
-sum[23] <= cla_16bit:CLA01.sum
-sum[24] <= cla_16bit:CLA01.sum
-sum[25] <= cla_16bit:CLA01.sum
-sum[26] <= cla_16bit:CLA01.sum
-sum[27] <= cla_16bit:CLA01.sum
-sum[28] <= cla_16bit:CLA01.sum
-sum[29] <= cla_16bit:CLA01.sum
-sum[30] <= cla_16bit:CLA01.sum
-sum[31] <= cla_16bit:CLA01.sum
-c_out <= cla_16bit:CLA01.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1427,7 +1326,7 @@ sum[15] <= cla_8bit:CLA01.sum
 c_out <= cla_8bit:CLA01.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1456,7 +1355,7 @@ sum[7] <= cla_4bit:CLA01.sum
 c_out <= cla_4bit:CLA01.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1473,7 +1372,7 @@ sum[3] <= full_adder:f03.sum
 c_out <= cla_unit_4bit:CLA.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA
 g[0] => c_out.IN1
 g[1] => c_out.IN1
 g[2] => c_out.IN1
@@ -1489,7 +1388,7 @@ c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f00
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1500,7 +1399,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f01
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1511,7 +1410,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f02
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f02
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1522,7 +1421,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f03
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f03
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1533,7 +1432,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA01
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1550,7 +1449,7 @@ sum[3] <= full_adder:f03.sum
 c_out <= cla_unit_4bit:CLA.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|cla_unit_4bit:CLA
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA01|cla_unit_4bit:CLA
 g[0] => c_out.IN1
 g[1] => c_out.IN1
 g[2] => c_out.IN1
@@ -1566,7 +1465,7 @@ c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f00
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1577,7 +1476,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1588,7 +1487,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1599,7 +1498,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1610,7 +1509,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1639,7 +1538,7 @@ sum[7] <= cla_4bit:CLA01.sum
 c_out <= cla_4bit:CLA01.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA00
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1656,7 +1555,7 @@ sum[3] <= full_adder:f03.sum
 c_out <= cla_unit_4bit:CLA.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA
 g[0] => c_out.IN1
 g[1] => c_out.IN1
 g[2] => c_out.IN1
@@ -1672,7 +1571,7 @@ c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1683,7 +1582,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1694,7 +1593,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1705,7 +1604,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1716,7 +1615,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA01
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1733,7 +1632,7 @@ sum[3] <= full_adder:f03.sum
 c_out <= cla_unit_4bit:CLA.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA
 g[0] => c_out.IN1
 g[1] => c_out.IN1
 g[2] => c_out.IN1
@@ -1749,7 +1648,7 @@ c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1760,7 +1659,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1771,7 +1670,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1782,7 +1681,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1793,7 +1692,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1846,7 +1745,7 @@ sum[15] <= cla_8bit:CLA01.sum
 c_out <= cla_8bit:CLA01.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1875,7 +1774,7 @@ sum[7] <= cla_4bit:CLA01.sum
 c_out <= cla_4bit:CLA01.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1892,7 +1791,7 @@ sum[3] <= full_adder:f03.sum
 c_out <= cla_unit_4bit:CLA.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA
 g[0] => c_out.IN1
 g[1] => c_out.IN1
 g[2] => c_out.IN1
@@ -1908,7 +1807,7 @@ c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f00
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1919,7 +1818,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f01
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1930,7 +1829,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f02
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f02
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1941,7 +1840,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f03
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f03
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1952,7 +1851,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -1969,7 +1868,7 @@ sum[3] <= full_adder:f03.sum
 c_out <= cla_unit_4bit:CLA.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|cla_unit_4bit:CLA
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|cla_unit_4bit:CLA
 g[0] => c_out.IN1
 g[1] => c_out.IN1
 g[2] => c_out.IN1
@@ -1985,7 +1884,7 @@ c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f00
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -1996,7 +1895,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2007,7 +1906,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2018,7 +1917,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2029,7 +1928,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -2058,7 +1957,7 @@ sum[7] <= cla_4bit:CLA01.sum
 c_out <= cla_4bit:CLA01.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -2075,7 +1974,7 @@ sum[3] <= full_adder:f03.sum
 c_out <= cla_unit_4bit:CLA.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA
 g[0] => c_out.IN1
 g[1] => c_out.IN1
 g[2] => c_out.IN1
@@ -2091,7 +1990,7 @@ c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2102,7 +2001,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2113,7 +2012,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2124,7 +2023,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2135,7 +2034,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01
 A[0] => A[0].IN1
 A[1] => A[1].IN1
 A[2] => A[2].IN1
@@ -2152,7 +2051,7 @@ sum[3] <= full_adder:f03.sum
 c_out <= cla_unit_4bit:CLA.c_out
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA
 g[0] => c_out.IN1
 g[1] => c_out.IN1
 g[2] => c_out.IN1
@@ -2168,7 +2067,7 @@ c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2179,7 +2078,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2190,7 +2089,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02
 A => sum.IN0
 A => g.IN0
 B => sum.IN1
@@ -2201,946 +2100,7 @@ g <= g.DB_MAX_OUTPUT_PORT_TYPE
 p <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-A[8] => A[8].IN1
-A[9] => A[9].IN1
-A[10] => A[10].IN1
-A[11] => A[11].IN1
-A[12] => A[12].IN1
-A[13] => A[13].IN1
-A[14] => A[14].IN1
-A[15] => A[15].IN1
-A[16] => A[16].IN1
-A[17] => A[17].IN1
-A[18] => A[18].IN1
-A[19] => A[19].IN1
-A[20] => A[20].IN1
-A[21] => A[21].IN1
-A[22] => A[22].IN1
-A[23] => A[23].IN1
-A[24] => A[24].IN1
-A[25] => A[25].IN1
-A[26] => A[26].IN1
-A[27] => A[27].IN1
-A[28] => A[28].IN1
-A[29] => A[29].IN1
-A[30] => A[30].IN1
-A[31] => A[31].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-B[8] => B[8].IN1
-B[9] => B[9].IN1
-B[10] => B[10].IN1
-B[11] => B[11].IN1
-B[12] => B[12].IN1
-B[13] => B[13].IN1
-B[14] => B[14].IN1
-B[15] => B[15].IN1
-B[16] => B[16].IN1
-B[17] => B[17].IN1
-B[18] => B[18].IN1
-B[19] => B[19].IN1
-B[20] => B[20].IN1
-B[21] => B[21].IN1
-B[22] => B[22].IN1
-B[23] => B[23].IN1
-B[24] => B[24].IN1
-B[25] => B[25].IN1
-B[26] => B[26].IN1
-B[27] => B[27].IN1
-B[28] => B[28].IN1
-B[29] => B[29].IN1
-B[30] => B[30].IN1
-B[31] => B[31].IN1
-c_in => c_in.IN1
-sum[0] <= cla_16bit:CLA00.sum
-sum[1] <= cla_16bit:CLA00.sum
-sum[2] <= cla_16bit:CLA00.sum
-sum[3] <= cla_16bit:CLA00.sum
-sum[4] <= cla_16bit:CLA00.sum
-sum[5] <= cla_16bit:CLA00.sum
-sum[6] <= cla_16bit:CLA00.sum
-sum[7] <= cla_16bit:CLA00.sum
-sum[8] <= cla_16bit:CLA00.sum
-sum[9] <= cla_16bit:CLA00.sum
-sum[10] <= cla_16bit:CLA00.sum
-sum[11] <= cla_16bit:CLA00.sum
-sum[12] <= cla_16bit:CLA00.sum
-sum[13] <= cla_16bit:CLA00.sum
-sum[14] <= cla_16bit:CLA00.sum
-sum[15] <= cla_16bit:CLA00.sum
-sum[16] <= cla_16bit:CLA01.sum
-sum[17] <= cla_16bit:CLA01.sum
-sum[18] <= cla_16bit:CLA01.sum
-sum[19] <= cla_16bit:CLA01.sum
-sum[20] <= cla_16bit:CLA01.sum
-sum[21] <= cla_16bit:CLA01.sum
-sum[22] <= cla_16bit:CLA01.sum
-sum[23] <= cla_16bit:CLA01.sum
-sum[24] <= cla_16bit:CLA01.sum
-sum[25] <= cla_16bit:CLA01.sum
-sum[26] <= cla_16bit:CLA01.sum
-sum[27] <= cla_16bit:CLA01.sum
-sum[28] <= cla_16bit:CLA01.sum
-sum[29] <= cla_16bit:CLA01.sum
-sum[30] <= cla_16bit:CLA01.sum
-sum[31] <= cla_16bit:CLA01.sum
-c_out <= cla_16bit:CLA01.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-A[8] => A[8].IN1
-A[9] => A[9].IN1
-A[10] => A[10].IN1
-A[11] => A[11].IN1
-A[12] => A[12].IN1
-A[13] => A[13].IN1
-A[14] => A[14].IN1
-A[15] => A[15].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-B[8] => B[8].IN1
-B[9] => B[9].IN1
-B[10] => B[10].IN1
-B[11] => B[11].IN1
-B[12] => B[12].IN1
-B[13] => B[13].IN1
-B[14] => B[14].IN1
-B[15] => B[15].IN1
-c_in => c_in.IN1
-sum[0] <= cla_8bit:CLA00.sum
-sum[1] <= cla_8bit:CLA00.sum
-sum[2] <= cla_8bit:CLA00.sum
-sum[3] <= cla_8bit:CLA00.sum
-sum[4] <= cla_8bit:CLA00.sum
-sum[5] <= cla_8bit:CLA00.sum
-sum[6] <= cla_8bit:CLA00.sum
-sum[7] <= cla_8bit:CLA00.sum
-sum[8] <= cla_8bit:CLA01.sum
-sum[9] <= cla_8bit:CLA01.sum
-sum[10] <= cla_8bit:CLA01.sum
-sum[11] <= cla_8bit:CLA01.sum
-sum[12] <= cla_8bit:CLA01.sum
-sum[13] <= cla_8bit:CLA01.sum
-sum[14] <= cla_8bit:CLA01.sum
-sum[15] <= cla_8bit:CLA01.sum
-c_out <= cla_8bit:CLA01.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-c_in => c_in.IN1
-sum[0] <= cla_4bit:CLA00.sum
-sum[1] <= cla_4bit:CLA00.sum
-sum[2] <= cla_4bit:CLA00.sum
-sum[3] <= cla_4bit:CLA00.sum
-sum[4] <= cla_4bit:CLA01.sum
-sum[5] <= cla_4bit:CLA01.sum
-sum[6] <= cla_4bit:CLA01.sum
-sum[7] <= cla_4bit:CLA01.sum
-c_out <= cla_4bit:CLA01.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-c_in => c_in.IN2
-sum[0] <= full_adder:f00.sum
-sum[1] <= full_adder:f01.sum
-sum[2] <= full_adder:f02.sum
-sum[3] <= full_adder:f03.sum
-c_out <= cla_unit_4bit:CLA.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA
-g[0] => c_out.IN1
-g[1] => c_out.IN1
-g[2] => c_out.IN1
-g[3] => c_out.IN1
-p[0] => c_out.IN0
-p[1] => c_out.IN1
-p[2] => c_out.IN1
-p[3] => c_out.IN1
-c_in => c_out.IN1
-c_out[0] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[1] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f00
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f01
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f02
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f03
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-c_in => c_in.IN2
-sum[0] <= full_adder:f00.sum
-sum[1] <= full_adder:f01.sum
-sum[2] <= full_adder:f02.sum
-sum[3] <= full_adder:f03.sum
-c_out <= cla_unit_4bit:CLA.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|cla_unit_4bit:CLA
-g[0] => c_out.IN1
-g[1] => c_out.IN1
-g[2] => c_out.IN1
-g[3] => c_out.IN1
-p[0] => c_out.IN0
-p[1] => c_out.IN1
-p[2] => c_out.IN1
-p[3] => c_out.IN1
-c_in => c_out.IN1
-c_out[0] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[1] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f00
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-c_in => c_in.IN1
-sum[0] <= cla_4bit:CLA00.sum
-sum[1] <= cla_4bit:CLA00.sum
-sum[2] <= cla_4bit:CLA00.sum
-sum[3] <= cla_4bit:CLA00.sum
-sum[4] <= cla_4bit:CLA01.sum
-sum[5] <= cla_4bit:CLA01.sum
-sum[6] <= cla_4bit:CLA01.sum
-sum[7] <= cla_4bit:CLA01.sum
-c_out <= cla_4bit:CLA01.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-c_in => c_in.IN2
-sum[0] <= full_adder:f00.sum
-sum[1] <= full_adder:f01.sum
-sum[2] <= full_adder:f02.sum
-sum[3] <= full_adder:f03.sum
-c_out <= cla_unit_4bit:CLA.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA
-g[0] => c_out.IN1
-g[1] => c_out.IN1
-g[2] => c_out.IN1
-g[3] => c_out.IN1
-p[0] => c_out.IN0
-p[1] => c_out.IN1
-p[2] => c_out.IN1
-p[3] => c_out.IN1
-c_in => c_out.IN1
-c_out[0] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[1] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-c_in => c_in.IN2
-sum[0] <= full_adder:f00.sum
-sum[1] <= full_adder:f01.sum
-sum[2] <= full_adder:f02.sum
-sum[3] <= full_adder:f03.sum
-c_out <= cla_unit_4bit:CLA.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA
-g[0] => c_out.IN1
-g[1] => c_out.IN1
-g[2] => c_out.IN1
-g[3] => c_out.IN1
-p[0] => c_out.IN0
-p[1] => c_out.IN1
-p[2] => c_out.IN1
-p[3] => c_out.IN1
-c_in => c_out.IN1
-c_out[0] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[1] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-A[8] => A[8].IN1
-A[9] => A[9].IN1
-A[10] => A[10].IN1
-A[11] => A[11].IN1
-A[12] => A[12].IN1
-A[13] => A[13].IN1
-A[14] => A[14].IN1
-A[15] => A[15].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-B[8] => B[8].IN1
-B[9] => B[9].IN1
-B[10] => B[10].IN1
-B[11] => B[11].IN1
-B[12] => B[12].IN1
-B[13] => B[13].IN1
-B[14] => B[14].IN1
-B[15] => B[15].IN1
-c_in => c_in.IN1
-sum[0] <= cla_8bit:CLA00.sum
-sum[1] <= cla_8bit:CLA00.sum
-sum[2] <= cla_8bit:CLA00.sum
-sum[3] <= cla_8bit:CLA00.sum
-sum[4] <= cla_8bit:CLA00.sum
-sum[5] <= cla_8bit:CLA00.sum
-sum[6] <= cla_8bit:CLA00.sum
-sum[7] <= cla_8bit:CLA00.sum
-sum[8] <= cla_8bit:CLA01.sum
-sum[9] <= cla_8bit:CLA01.sum
-sum[10] <= cla_8bit:CLA01.sum
-sum[11] <= cla_8bit:CLA01.sum
-sum[12] <= cla_8bit:CLA01.sum
-sum[13] <= cla_8bit:CLA01.sum
-sum[14] <= cla_8bit:CLA01.sum
-sum[15] <= cla_8bit:CLA01.sum
-c_out <= cla_8bit:CLA01.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-c_in => c_in.IN1
-sum[0] <= cla_4bit:CLA00.sum
-sum[1] <= cla_4bit:CLA00.sum
-sum[2] <= cla_4bit:CLA00.sum
-sum[3] <= cla_4bit:CLA00.sum
-sum[4] <= cla_4bit:CLA01.sum
-sum[5] <= cla_4bit:CLA01.sum
-sum[6] <= cla_4bit:CLA01.sum
-sum[7] <= cla_4bit:CLA01.sum
-c_out <= cla_4bit:CLA01.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-c_in => c_in.IN2
-sum[0] <= full_adder:f00.sum
-sum[1] <= full_adder:f01.sum
-sum[2] <= full_adder:f02.sum
-sum[3] <= full_adder:f03.sum
-c_out <= cla_unit_4bit:CLA.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA
-g[0] => c_out.IN1
-g[1] => c_out.IN1
-g[2] => c_out.IN1
-g[3] => c_out.IN1
-p[0] => c_out.IN0
-p[1] => c_out.IN1
-p[2] => c_out.IN1
-p[3] => c_out.IN1
-c_in => c_out.IN1
-c_out[0] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[1] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f00
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f01
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f02
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f03
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-c_in => c_in.IN2
-sum[0] <= full_adder:f00.sum
-sum[1] <= full_adder:f01.sum
-sum[2] <= full_adder:f02.sum
-sum[3] <= full_adder:f03.sum
-c_out <= cla_unit_4bit:CLA.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|cla_unit_4bit:CLA
-g[0] => c_out.IN1
-g[1] => c_out.IN1
-g[2] => c_out.IN1
-g[3] => c_out.IN1
-p[0] => c_out.IN0
-p[1] => c_out.IN1
-p[2] => c_out.IN1
-p[3] => c_out.IN1
-c_in => c_out.IN1
-c_out[0] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[1] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f00
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-A[4] => A[4].IN1
-A[5] => A[5].IN1
-A[6] => A[6].IN1
-A[7] => A[7].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-B[4] => B[4].IN1
-B[5] => B[5].IN1
-B[6] => B[6].IN1
-B[7] => B[7].IN1
-c_in => c_in.IN1
-sum[0] <= cla_4bit:CLA00.sum
-sum[1] <= cla_4bit:CLA00.sum
-sum[2] <= cla_4bit:CLA00.sum
-sum[3] <= cla_4bit:CLA00.sum
-sum[4] <= cla_4bit:CLA01.sum
-sum[5] <= cla_4bit:CLA01.sum
-sum[6] <= cla_4bit:CLA01.sum
-sum[7] <= cla_4bit:CLA01.sum
-c_out <= cla_4bit:CLA01.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-c_in => c_in.IN2
-sum[0] <= full_adder:f00.sum
-sum[1] <= full_adder:f01.sum
-sum[2] <= full_adder:f02.sum
-sum[3] <= full_adder:f03.sum
-c_out <= cla_unit_4bit:CLA.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA
-g[0] => c_out.IN1
-g[1] => c_out.IN1
-g[2] => c_out.IN1
-g[3] => c_out.IN1
-p[0] => c_out.IN0
-p[1] => c_out.IN1
-p[2] => c_out.IN1
-p[3] => c_out.IN1
-c_in => c_out.IN1
-c_out[0] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[1] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01
-A[0] => A[0].IN1
-A[1] => A[1].IN1
-A[2] => A[2].IN1
-A[3] => A[3].IN1
-B[0] => B[0].IN1
-B[1] => B[1].IN1
-B[2] => B[2].IN1
-B[3] => B[3].IN1
-c_in => c_in.IN2
-sum[0] <= full_adder:f00.sum
-sum[1] <= full_adder:f01.sum
-sum[2] <= full_adder:f02.sum
-sum[3] <= full_adder:f03.sum
-c_out <= cla_unit_4bit:CLA.c_out
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA
-g[0] => c_out.IN1
-g[1] => c_out.IN1
-g[2] => c_out.IN1
-g[3] => c_out.IN1
-p[0] => c_out.IN0
-p[1] => c_out.IN1
-p[2] => c_out.IN1
-p[3] => c_out.IN1
-c_in => c_out.IN1
-c_out[0] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[1] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[2] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-c_out[3] <= c_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02
-A => sum.IN0
-A => g.IN0
-B => sum.IN1
-B => g.IN1
-c_in => sum.IN1
-sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
-g <= g.DB_MAX_OUTPUT_PORT_TYPE
-p <= sum.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03
+|top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03
 A => sum.IN0
 A => g.IN0
 B => sum.IN1

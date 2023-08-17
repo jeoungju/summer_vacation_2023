@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Mon Aug 14 17:50:15 2023
+Thu Aug 17 10:37:27 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -26,8 +26,8 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  18. Port Connectivity Checks: "encorder:dut_encorder|gen_en:dut_gen_en"
  19. Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_s_s"
  20. Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_a_s"
- 21. Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_s_u"
- 22. Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_a_u"
+ 21. Port Connectivity Checks: "alu:dut_alu|cla_16bit:dut_cla_16bit_s_u"
+ 22. Port Connectivity Checks: "alu:dut_alu|cla_16bit:dut_cla_16bit_a_u"
  23. Elapsed Time Per Partition
  24. Analysis & Synthesis Messages
  25. Analysis & Synthesis Suppressed Messages
@@ -56,13 +56,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Aug 14 17:50:15 2023      ;
+; Analysis & Synthesis Status        ; Successful - Thu Aug 17 10:37:27 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; top                                        ;
 ; Top-level Entity Name              ; top                                        ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 827                                        ;
-;     Total combinational functions  ; 726                                        ;
+; Total logic elements               ; 839                                        ;
+;     Total combinational functions  ; 738                                        ;
 ;     Dedicated logic registers      ; 392                                        ;
 ; Total registers                    ; 392                                        ;
 ; Total pins                         ; 4                                          ;
@@ -169,12 +169,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 3           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
-;     Processors 5-8         ;   0.0%      ;
+;     Processors 2-3         ; < 0.1%      ;
+;     Processors 4-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -209,17 +209,17 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 827       ;
+; Estimated Total logic elements              ; 839       ;
 ;                                             ;           ;
-; Total combinational functions               ; 726       ;
+; Total combinational functions               ; 738       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 276       ;
-;     -- 3 input functions                    ; 299       ;
-;     -- <=2 input functions                  ; 151       ;
+;     -- 4 input functions                    ; 274       ;
+;     -- 3 input functions                    ; 312       ;
+;     -- <=2 input functions                  ; 152       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 582       ;
-;     -- arithmetic mode                      ; 144       ;
+;     -- normal mode                          ; 579       ;
+;     -- arithmetic mode                      ; 159       ;
 ;                                             ;           ;
 ; Total registers                             ; 392       ;
 ;     -- Dedicated logic registers            ; 392       ;
@@ -229,8 +229,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 392       ;
-; Total fan-out                               ; 3866      ;
-; Average fan-out                             ; 3.43      ;
+; Total fan-out                               ; 3943      ;
+; Average fan-out                             ; 3.46      ;
 +---------------------------------------------+-----------+
 
 
@@ -239,10 +239,36 @@ applicable agreement for further details.
 +---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Library Name ;
 +---------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                  ; 726 (1)           ; 392 (0)      ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |top                                                                                                         ; work         ;
-;    |alu:dut_alu|                      ; 540 (155)         ; 238 (38)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu                                                                                             ; work         ;
+; |top                                  ; 738 (1)           ; 392 (0)      ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |top                                                                                                         ; work         ;
+;    |alu:dut_alu|                      ; 552 (169)         ; 238 (38)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu                                                                                             ; work         ;
+;       |cla_16bit:dut_cla_16bit_s_u|   ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u                                                                 ; work         ;
+;          |cla_8bit:CLA00|             ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00                                                  ; work         ;
+;             |cla_4bit:CLA00|          ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00                                   ; work         ;
+;                |cla_unit_4bit:CLA|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA                 ; work         ;
+;                |full_adder:f01|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f01                    ; work         ;
+;                |full_adder:f02|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f02                    ; work         ;
+;                |full_adder:f03|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f03                    ; work         ;
+;             |cla_4bit:CLA01|          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01                                   ; work         ;
+;                |cla_unit_4bit:CLA|    ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|cla_unit_4bit:CLA                 ; work         ;
+;                |full_adder:f00|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f00                    ; work         ;
+;                |full_adder:f01|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01                    ; work         ;
+;                |full_adder:f02|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02                    ; work         ;
+;                |full_adder:f03|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03                    ; work         ;
+;          |cla_8bit:CLA01|             ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01                                                  ; work         ;
+;             |cla_4bit:CLA00|          ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00                                   ; work         ;
+;                |cla_unit_4bit:CLA|    ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA                 ; work         ;
+;                |full_adder:f00|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00                    ; work         ;
+;                |full_adder:f01|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01                    ; work         ;
+;                |full_adder:f02|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02                    ; work         ;
+;                |full_adder:f03|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03                    ; work         ;
+;             |cla_4bit:CLA01|          ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01                                   ; work         ;
+;                |cla_unit_4bit:CLA|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA                 ; work         ;
+;                |full_adder:f00|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00                    ; work         ;
+;                |full_adder:f01|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01                    ; work         ;
+;                |full_adder:f02|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02                    ; work         ;
+;                |full_adder:f03|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_16bit:dut_cla_16bit_s_u|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03                    ; work         ;
 ;       |cla_32bit:dut_cla_32bit_a_s|   ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s                                                                 ; work         ;
-;          |cla_16bit:CLA00|            ; 39 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00                                                 ; work         ;
+;          |cla_16bit:CLA00|            ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00                                                 ; work         ;
 ;             |cla_8bit:CLA00|          ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA00                                  ; work         ;
 ;                |cla_4bit:CLA00|       ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00                   ; work         ;
 ;                   |cla_unit_4bit:CLA| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA ; work         ;
@@ -256,19 +282,23 @@ applicable agreement for further details.
 ;                   |full_adder:f01|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01    ; work         ;
 ;                   |full_adder:f02|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02    ; work         ;
 ;                   |full_adder:f03|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03    ; work         ;
-;             |cla_8bit:CLA01|          ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01                                  ; work         ;
+;             |cla_8bit:CLA01|          ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01                                  ; work         ;
 ;                |cla_4bit:CLA00|       ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00                   ; work         ;
 ;                   |cla_unit_4bit:CLA| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA ; work         ;
 ;                   |full_adder:f00|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00    ; work         ;
 ;                   |full_adder:f01|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01    ; work         ;
 ;                   |full_adder:f02|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02    ; work         ;
 ;                   |full_adder:f03|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03    ; work         ;
-;                |cla_4bit:CLA01|       ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01                   ; work         ;
-;                   |cla_unit_4bit:CLA| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA ; work         ;
+;                |cla_4bit:CLA01|       ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01                   ; work         ;
+;                   |cla_unit_4bit:CLA| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA ; work         ;
 ;                   |full_adder:f00|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00    ; work         ;
 ;                   |full_adder:f01|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01    ; work         ;
 ;                   |full_adder:f02|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02    ; work         ;
 ;                   |full_adder:f03|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03    ; work         ;
+;          |cla_16bit:CLA01|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA01                                                 ; work         ;
+;             |cla_8bit:CLA01|          ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA01|cla_8bit:CLA01                                  ; work         ;
+;                |cla_4bit:CLA01|       ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01                   ; work         ;
+;                   |full_adder:f00|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_a_s|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00    ; work         ;
 ;       |cla_32bit:dut_cla_32bit_s_s|   ; 45 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_s                                                                 ; work         ;
 ;          |cla_16bit:CLA00|            ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_s|cla_16bit:CLA00                                                 ; work         ;
 ;             |cla_8bit:CLA00|          ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_s|cla_16bit:CLA00|cla_8bit:CLA00                                  ; work         ;
@@ -304,33 +334,6 @@ applicable agreement for further details.
 ;                   |full_adder:f00|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_s|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00    ; work         ;
 ;                   |full_adder:f01|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_s|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01    ; work         ;
 ;                   |full_adder:f02|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_s|cla_16bit:CLA01|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02    ; work         ;
-;       |cla_32bit:dut_cla_32bit_s_u|   ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u                                                                 ; work         ;
-;          |cla_16bit:CLA00|            ; 37 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00                                                 ; work         ;
-;             |cla_8bit:CLA00|          ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00                                  ; work         ;
-;                |cla_4bit:CLA00|       ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00                   ; work         ;
-;                   |cla_unit_4bit:CLA| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA ; work         ;
-;                   |full_adder:f01|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f01    ; work         ;
-;                   |full_adder:f02|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f02    ; work         ;
-;                   |full_adder:f03|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f03    ; work         ;
-;                |cla_4bit:CLA01|       ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01                   ; work         ;
-;                   |cla_unit_4bit:CLA| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|cla_unit_4bit:CLA ; work         ;
-;                   |full_adder:f00|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f00    ; work         ;
-;                   |full_adder:f01|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f01    ; work         ;
-;                   |full_adder:f02|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f02    ; work         ;
-;                   |full_adder:f03|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA01|full_adder:f03    ; work         ;
-;             |cla_8bit:CLA01|          ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01                                  ; work         ;
-;                |cla_4bit:CLA00|       ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00                   ; work         ;
-;                   |cla_unit_4bit:CLA| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|cla_unit_4bit:CLA ; work         ;
-;                   |full_adder:f00|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f00    ; work         ;
-;                   |full_adder:f01|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f01    ; work         ;
-;                   |full_adder:f02|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f02    ; work         ;
-;                   |full_adder:f03|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA00|full_adder:f03    ; work         ;
-;                |cla_4bit:CLA01|       ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01                   ; work         ;
-;                   |cla_unit_4bit:CLA| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|cla_unit_4bit:CLA ; work         ;
-;                   |full_adder:f00|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f00    ; work         ;
-;                   |full_adder:f01|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f01    ; work         ;
-;                   |full_adder:f02|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f02    ; work         ;
-;                   |full_adder:f03|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|cla_32bit:dut_cla_32bit_s_u|cla_16bit:CLA00|cla_8bit:CLA01|cla_4bit:CLA01|full_adder:f03    ; work         ;
 ;       |delay:dut_delay|               ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|delay:dut_delay                                                                             ; work         ;
 ;       |divider_u:dut_divider_u|       ; 111 (111)         ; 56 (56)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|divider_u:dut_divider_u                                                                     ; work         ;
 ;       |mul_s:dut_mul_s|               ; 90 (90)           ; 70 (70)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|alu:dut_alu|mul_s:dut_mul_s                                                                             ; work         ;
@@ -453,8 +456,8 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 392   ;
-; Number of registers using Synchronous Clear  ; 53    ;
-; Number of registers using Synchronous Load   ; 54    ;
+; Number of registers using Synchronous Clear  ; 68    ;
+; Number of registers using Synchronous Load   ; 69    ;
 ; Number of registers using Asynchronous Clear ; 392   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 235   ;
@@ -493,9 +496,9 @@ Encoding Type:  One-Hot
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|decorder:d1|cnt_2[0]                      ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |top|uart:dut_uart|tx:dut_tx|shift_data[6]     ;
 ; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|alu:dut_alu|divider_u:dut_divider_u|q[11] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|decorder:d1|op_d[3]                       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |top|decorder:d1|op_d[2]                       ;
 ; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |top|alu:dut_alu|mul_s:dut_mul_s|A[4]          ;
-; 66:1               ; 8 bits    ; 352 LEs       ; 80 LEs               ; 272 LEs                ; Yes        ; |top|decorder:d1|src1_d[0]                     ;
+; 66:1               ; 8 bits    ; 352 LEs       ; 80 LEs               ; 272 LEs                ; Yes        ; |top|decorder:d1|src2_d[3]                     ;
 ; 8:1                ; 15 bits   ; 75 LEs        ; 60 LEs               ; 15 LEs                 ; Yes        ; |top|alu:dut_alu|result_d[17]                  ;
 ; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; Yes        ; |top|alu:dut_alu|result_d[15]                  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|encorder:dut_encorder|cnt_txen[0]         ;
@@ -523,45 +526,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_s_s"                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_a_s"                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "alu:dut_alu|cla_16bit:dut_cla_16bit_s_u"                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; c_in  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_s_s" ;
+; Port Connectivity Checks: "alu:dut_alu|cla_16bit:dut_cla_16bit_a_u" ;
 +------+-------+----------+-------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                   ;
 +------+-------+----------+-------------------------------------------+
 ; c_in ; Input ; Info     ; Stuck at GND                              ;
 +------+-------+----------+-------------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_a_s" ;
-+------+-------+----------+-------------------------------------------+
-; Port ; Type  ; Severity ; Details                                   ;
-+------+-------+----------+-------------------------------------------+
-; c_in ; Input ; Info     ; Stuck at GND                              ;
-+------+-------+----------+-------------------------------------------+
-
-
-+---------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_s_u" ;
-+-----------+-------+----------+--------------------------------------+
-; Port      ; Type  ; Severity ; Details                              ;
-+-----------+-------+----------+--------------------------------------+
-; A[31..16] ; Input ; Info     ; Stuck at GND                         ;
-; B[31..16] ; Input ; Info     ; Stuck at GND                         ;
-; c_in      ; Input ; Info     ; Stuck at GND                         ;
-+-----------+-------+----------+--------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "alu:dut_alu|cla_32bit:dut_cla_32bit_a_u"                                                 ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; A[31..16] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; B[31..16] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; c_in      ; Input  ; Info     ; Stuck at GND                                                                        ;
-; c_out     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -579,7 +580,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Mon Aug 14 17:50:12 2023
+    Info: Processing started: Thu Aug 17 10:37:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /summer_vacation_2023/022_uart_cal_project/src/rtl/alu/delay.v
@@ -626,20 +627,20 @@ Info (12128): Elaborating entity "tx" for hierarchy "uart:dut_uart|tx:dut_tx"
 Info (12128): Elaborating entity "decorder" for hierarchy "decorder:d1"
 Info (12128): Elaborating entity "alu" for hierarchy "alu:dut_alu"
 Warning (10858): Verilog HDL warning at alu.v(34): object res_d_s used but never assigned
-Warning (10858): Verilog HDL warning at alu.v(45): object done_d_s used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at alu.v(81): object "src1_not" assigned a value but never read
+Warning (10858): Verilog HDL warning at alu.v(49): object done_d_s used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at alu.v(85): object "src1_not" assigned a value but never read
 Warning (10030): Net "res_d_s" at alu.v(34) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "done_d_s" at alu.v(45) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "done_d_s" at alu.v(49) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "divider_u" for hierarchy "alu:dut_alu|divider_u:dut_divider_u"
 Info (12128): Elaborating entity "mul_s" for hierarchy "alu:dut_alu|mul_s:dut_mul_s"
 Info (12128): Elaborating entity "mul_u" for hierarchy "alu:dut_alu|mul_u:dut_mul_u"
 Info (12128): Elaborating entity "delay" for hierarchy "alu:dut_alu|delay:dut_delay"
-Info (12128): Elaborating entity "cla_32bit" for hierarchy "alu:dut_alu|cla_32bit:dut_cla_32bit_a_u"
-Info (12128): Elaborating entity "cla_16bit" for hierarchy "alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00"
-Info (12128): Elaborating entity "cla_8bit" for hierarchy "alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00"
-Info (12128): Elaborating entity "cla_4bit" for hierarchy "alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00"
-Info (12128): Elaborating entity "cla_unit_4bit" for hierarchy "alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA"
-Info (12128): Elaborating entity "full_adder" for hierarchy "alu:dut_alu|cla_32bit:dut_cla_32bit_a_u|cla_16bit:CLA00|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f00"
+Info (12128): Elaborating entity "cla_16bit" for hierarchy "alu:dut_alu|cla_16bit:dut_cla_16bit_a_u"
+Info (12128): Elaborating entity "cla_8bit" for hierarchy "alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00"
+Info (12128): Elaborating entity "cla_4bit" for hierarchy "alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00"
+Info (12128): Elaborating entity "cla_unit_4bit" for hierarchy "alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00|cla_unit_4bit:CLA"
+Info (12128): Elaborating entity "full_adder" for hierarchy "alu:dut_alu|cla_16bit:dut_cla_16bit_a_u|cla_8bit:CLA00|cla_4bit:CLA00|full_adder:f00"
+Info (12128): Elaborating entity "cla_32bit" for hierarchy "alu:dut_alu|cla_32bit:dut_cla_32bit_a_s"
 Info (12128): Elaborating entity "encorder" for hierarchy "encorder:dut_encorder"
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
@@ -648,15 +649,15 @@ Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/summer_vacation_2023/022_UART_CAL_PROJECT/FPGA/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 839 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 851 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 835 logic cells
+    Info (21061): Implemented 847 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Mon Aug 14 17:50:15 2023
+    Info: Peak virtual memory: 4649 megabytes
+    Info: Processing ended: Thu Aug 17 10:37:27 2023
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

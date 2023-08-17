@@ -5,6 +5,7 @@
 //
 ../src/rtl/ALU/alu.v
 ../src/rtl/ALU/divider_u.v
+../src/rtl/ALU/divider_s.v
 ../src/rtl/ALU/mul_s.v
 ../src/rtl/ALU/mul_u.v
 ../src/rtl/ALU/delay.v

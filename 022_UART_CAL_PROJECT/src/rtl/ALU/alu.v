@@ -28,6 +28,14 @@ module alu (
         end
     end
 
+    wire div_start_u;
+    wire div_start_s;
+    assign div_start_u = ((op_s == 5'h08) && (dtype_s == 4'h1)) ? 1'b1 : 1'b0;
+    assign div_start_s = ((op_s == 5'h08) && (dtype_s == 4'h2)) ? 1'b1 : 1'b0;
+
+    wire different;
+    assign different = (src1[15] == src2[15]) ? 1'b0 : 1'b1;
+
     reg [31:0] result_d;
 
     wire [31:0] res_d_u; //result divider unsigned
@@ -54,10 +62,27 @@ module alu (
         .n_rst(n_rst),
         .M(src2),
         .Q(src1),
-        .start(op_s[3]), // division
+        .start(div_start_u), // division
         .remain(res_d_u[15:0]),
         .quotient(res_d_u[31:16]),
         .done(done_d_u)
+    );
+
+    wire [15:0] src1_division;
+    wire [15:0] src2_division;
+    assign src1_division = (src1[15] == 1'b1) ? ~src1 + 16'h1 : src1;
+    assign src2_division = (src2[15] == 1'b1) ? ~src2 + 16'h1 : src2;
+
+    divider_s dut_divider_s (
+        .clk(clk),
+        .n_rst(n_rst),
+        .M(src2_division),
+        .Q(src1_division),
+        .start(div_start_s), // division
+        .different(different),
+        .remain(res_d_s[15:0]),
+        .quotient(res_d_s[31:16]),
+        .done(done_d_s)
     );
 
     mul_s dut_mul_s (
@@ -163,7 +188,7 @@ module alu (
                 result_d <= {15'h0000,a_u_carry,res_a_u};
             end
             else if ((dtype == 4'h1) && (op == 5'h02)) begin
-                result_d <= (src1 > src2) ? {16'h0000,res_s_u} : {16'hffff,res_s_u};
+                result_d <= (src1 >= src2) ? {16'h0000,res_s_u} : {16'hffff,res_s_u};
             end
             else if ((dtype == 4'h2) && (op == 5'h01)) begin
                 result_d <= res_a_s;
@@ -195,7 +220,7 @@ module alu (
             alu_done_d <= 1'b0;
         end
         else begin
-            alu_done_d <= ((done_d_u) | (done_m_s) | (done_m_u) | (done_add_sub)) ? 1'b1 : 1'b0;
+            alu_done_d <= ((done_d_u) | (done_d_s) | (done_m_s) | (done_m_u) | (done_add_sub)) ? 1'b1 : 1'b0;
         end
     end
 
