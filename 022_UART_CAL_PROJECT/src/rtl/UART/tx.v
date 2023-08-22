@@ -5,7 +5,8 @@ module tx(
     input txen,
     input [7:0] tx_data,
     input valid,
-    output reg txd
+    output reg txd,
+    output reg tx_done
 );
 
 localparam IDLE = 2'h0; 
@@ -73,6 +74,18 @@ always @(posedge clk or negedge n_rst)
         end
     end
     
+always @(posedge clk or negedge n_rst) begin
+    if (!n_rst) begin
+        tx_done <= 1'b0;
+    end
+    else if (tx_state == STOP) begin
+        tx_done <= 1'b1;
+    end
+    else begin
+        tx_done <= 1'b0;
+    end
+end
+
 // cnt_4 
 /*
 always @(posedge clk or negedge n_rst) begin

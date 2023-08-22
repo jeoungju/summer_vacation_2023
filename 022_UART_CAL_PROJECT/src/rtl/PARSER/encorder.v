@@ -4,6 +4,7 @@ module encorder (
     input n_rst,
     input alu_done,
     input [31:0] result,
+    input tx_done,
 
     output [7:0] uart_out,
     output uart_valid
@@ -40,8 +41,8 @@ module encorder (
             IDLE : n_state = (alu_done == 1'b1) ? UART_SHIFT : state;
             UART_SHIFT : n_state = UART_DATA;
             UART_DATA : n_state = UART_END;
-            UART_END : n_state = (cnt_txen == 4'h0) ? UART_VALID : state;
-            UART_VALID : n_state = (cnt == 4'h0) ? IDLE : (txen == 1'b1) ? UART_SHIFT : state;
+            UART_END : n_state = (cnt == 4'h0) ? IDLE : UART_VALID;
+            UART_VALID : n_state = (tx_done == 1'b1) ? UART_SHIFT : state;
             default : n_state = IDLE;
         endcase
 
@@ -136,14 +137,14 @@ module encorder (
         else if (state == IDLE) begin
             cnt <= 4'h8;
         end
-        else if (state == UART_VALID) begin
-            cnt <= (txen == 1'b1) ? cnt - 4'h1 : cnt;
+        else if (state == UART_END) begin
+            cnt <= cnt - 4'h1;
         end
         else begin
             cnt <= cnt;
         end
     end
-
+    /*
     //cnt_txen for 8times
     always @(posedge clk or negedge n_rst) begin
         if (!n_rst) begin
@@ -159,6 +160,7 @@ module encorder (
             cnt_txen <= cnt_txen;
         end
     end
+    */
 
     //Uart valid signal
     //1clock valid signal
@@ -169,7 +171,7 @@ module encorder (
             uart_valid_dd <= 1'b0;
         end
         else begin
-            uart_valid_d <= ((state == UART_VALID) && (cnt != 4'h0)) ? 1'b1 : 1'b0;
+            uart_valid_d <= ((state == UART_END) && (cnt != 4'h0)) ? 1'b1 : 1'b0;
             uart_valid_dd <= uart_valid_d;
         end
     end

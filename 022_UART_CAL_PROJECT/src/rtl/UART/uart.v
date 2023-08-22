@@ -9,7 +9,8 @@ module uart (
 
     input [7:0] tx_data,
     output txd,
-    input tx_valid
+    input tx_valid,
+    output tx_done
 );
 
     wire txen;
@@ -37,7 +38,8 @@ module uart (
         .txen(txen),
         .tx_data(tx_data),
         .txd(txd),
-        .valid(tx_valid)
+        .valid(tx_valid),
+        .tx_done(tx_done)
     );
 
 endmodule
