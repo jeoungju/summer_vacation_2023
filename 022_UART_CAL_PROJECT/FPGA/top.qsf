@@ -55,6 +55,7 @@ set_location_assignment PIN_Y2 -to clk
 set_location_assignment PIN_M23 -to n_rst
 set_location_assignment PIN_G12 -to rxd
 set_location_assignment PIN_G9 -to txd
+set_global_assignment -name VERILOG_FILE ../src/rtl/ALU/divider_s.v
 set_global_assignment -name VERILOG_FILE ../src/rtl/ALU/delay.v
 set_global_assignment -name VERILOG_FILE ../src/rtl/top.v
 set_global_assignment -name VERILOG_FILE ../src/rtl/PARSER/encorder.v

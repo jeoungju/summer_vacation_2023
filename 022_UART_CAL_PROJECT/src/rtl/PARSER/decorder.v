@@ -38,7 +38,7 @@ module decorder (
         case (state)
             IDLE : n_state = ((data == 8'h49) && (valid == 1'b1)) ? FORMAT : state;
             FORMAT : n_state = ((data == 8'h20) && (valid == 1'b1)) ? TYPE : state;
-            TYPE : n_state = (valid == 1'b1) ? DATA_1 : state;
+            TYPE : n_state = (((data == 8'h53) || (data == 8'h57)) && (valid == 1'b1)) ? DATA_1 : state;
             DATA_1 : n_state = (cnt_1 == 3'h0) ? OPERATION : state;
             OPERATION : n_state = (valid == 1'b1) ? DATA_2 : state;
             DATA_2 : n_state = (cnt_2 == 3'h0) ? EQUAL : state;

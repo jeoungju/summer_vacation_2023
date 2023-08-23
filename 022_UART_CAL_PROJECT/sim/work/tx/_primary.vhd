@@ -7,6 +7,7 @@ entity tx is
         txen            : in     vl_logic;
         tx_data         : in     vl_logic_vector(7 downto 0);
         valid           : in     vl_logic;
-        txd             : out    vl_logic
+        txd             : out    vl_logic;
+        tx_done         : out    vl_logic
     );
 end tx;

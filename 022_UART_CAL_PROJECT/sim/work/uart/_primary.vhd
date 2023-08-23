@@ -9,6 +9,7 @@ entity uart is
         rx_valid        : out    vl_logic;
         tx_data         : in     vl_logic_vector(7 downto 0);
         txd             : out    vl_logic;
-        tx_valid        : in     vl_logic
+        tx_valid        : in     vl_logic;
+        tx_done         : out    vl_logic
     );
 end uart;

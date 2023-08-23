@@ -35,7 +35,7 @@ module top (
         .tx_done(tx_done)
     );
 
-    decorder d1 (
+    decorder dut_decorder (
         .clk(clk),
         .n_rst(n_rst),
         .data(rx_data),

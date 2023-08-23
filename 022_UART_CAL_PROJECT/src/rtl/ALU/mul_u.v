@@ -40,7 +40,7 @@ module mul_u (
 
     always @(*)
         case(state)
-            IDLE : n_state = ((dtype == 4'h2) && (start == 1'b1)) ? CHECK : state;
+            IDLE : n_state = ((dtype == 4'h1) && (start == 1'b1)) ? CHECK : state;
             CHECK : n_state = (count == 5'h00) ? IDLE : state;
             default : n_state = IDLE;
         endcase
@@ -54,7 +54,7 @@ module mul_u (
                 A <= 16'h0000;
             end
             else  begin
-                A <= ((q[0]) ==1'b1) ? {c,A_m[15:1]} : {c,A[15:1]};
+                A <= ((q[0]) ==1'b1) ? {c,A_m[15:1]} : {1'b0,A[15:1]};
             end
         end
     end

@@ -37,7 +37,7 @@ module mul_s (
 
     always @(*)
         case(state)
-            IDLE : n_state = ((dtype == 4'h1) && (start == 1'b1)) ? CHECK : state;
+            IDLE : n_state = ((dtype == 4'h2) && (start == 1'b1)) ? CHECK : state;
             CHECK : n_state = (count == 5'h00) ? IDLE : state;
             default : n_state = IDLE;
         endcase

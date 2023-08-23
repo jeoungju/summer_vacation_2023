@@ -5,11 +5,11 @@ cModel Technology
 Z0 dD:\summer_vacation_2023\022_UART_CAL_PROJECT\sim
 valu
 !i10b 1
-Z1 !s100 QT2fLSfQN:4Ze]]R0[8W:2
-Z2 I4cmW2am>De^`Tfi4z5D<B2
+Z1 !s100 2@D57lFHFG^TT`jTA>c9j3
+Z2 I:aeWokWUnF1YYD^UiBYMX0
 Z3 VUg^Kz]=fJeU>ASAbb42GY0
 Z4 dD:\summer_vacation_2023\022_UART_CAL_PROJECT\sim
-Z5 w1692257851
+Z5 w1692697351
 Z6 8../src/rtl/ALU/alu.v
 Z7 F../src/rtl/ALU/alu.v
 L0 2
@@ -17,7 +17,7 @@ Z8 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z9 !s108 1692258107.097000
+Z9 !s108 1692754741.531000
 Z10 !s107 ../testbench/testbench.v|../src/rtl/top.v|../src/rtl/PARSER/encorder.v|../src/rtl/PARSER/decorder.v|../src/rtl/ALU/CLA/cla_32bit.v|../src/rtl/ALU/CLA/cla_16bit.v|../src/rtl/ALU/CLA/cla_8bit.v|../src/rtl/ALU/CLA/cla_4bit.v|../src/rtl/ALU/CLA/cla_unit_4bit.v|../src/rtl/ALU/CLA/full_adder.v|../src/rtl/ALU/delay.v|../src/rtl/ALU/mul_u.v|../src/rtl/ALU/mul_s.v|../src/rtl/ALU/divider_s.v|../src/rtl/ALU/divider_u.v|../src/rtl/ALU/alu.v|../src/rtl/UART/uart.v|../src/rtl/UART/tx.v|../src/rtl/UART/rx.v|../src/rtl/UART/gen_en.v|
 Z11 !s90 -reportprogress|300|-f|run.f|
 !s101 -O0
@@ -119,11 +119,11 @@ R11
 o-O0
 vdecorder
 !i10b 1
-Z42 !s100 n53FV1M=50[X0:N499fYN2
-Z43 I`C`XN5PCcX>4M7^Zk6M_60
+Z42 !s100 6ehDSOX2om9Lb0^SRn5=b3
+Z43 IA1c@>P`9?aUEgXF@KIET[1
 Z44 V12@^i9UFZHC^giBQ5=BXd3
 R4
-Z45 w1691993104
+Z45 w1692695103
 Z46 8../src/rtl/PARSER/decorder.v
 Z47 F../src/rtl/PARSER/decorder.v
 L0 3
@@ -195,11 +195,11 @@ R11
 o-O0
 vencorder
 !i10b 1
-Z66 !s100 EomG0bC;@@Z^hhkfFVQ_]0
-Z67 I=n8:0IFz<bDW9k3VLl50g2
-Z68 VU9O<J34LSa21IShdUmZC53
+Z66 !s100 lUlk5k1LilNX6L?2egBiC2
+Z67 IS@0knR[lKf>SKCl<=Qzed1
+Z68 VIc<B[namVemm@`X=TO]Nc3
 R4
-Z69 w1691999990
+Z69 w1692680883
 Z70 8../src/rtl/PARSER/encorder.v
 Z71 F../src/rtl/PARSER/encorder.v
 L0 2
@@ -237,7 +237,7 @@ Z78 !s100 Cf^emYm`<9AHKDLIQ7P7g3
 Z79 IfgVUW`^YRSN<MRjOB[1242
 Z80 VY;N<Hcdi@nKjYF5j4eNb[2
 R4
-Z81 w1692247627
+Z81 w1692695567
 Z82 8../src/rtl/UART/gen_en.v
 Z83 F../src/rtl/UART/gen_en.v
 L0 8
@@ -252,11 +252,11 @@ R11
 o-O0
 vmul_s
 !i10b 1
-Z84 !s100 8Ad73^MiE2zz^Jdi7U`<=0
-Z85 IoU5>l@;djMVMNzggLd]8i3
+Z84 !s100 XiF;3[a:O__;YMdG8zYD?3
+Z85 I;fJU:4ZinjJR4:;5YUFJP0
 Z86 Vz3KN_iRI;e`069:^GaDWm1
 R4
-Z87 w1690769201
+Z87 w1692696762
 Z88 8../src/rtl/ALU/mul_s.v
 Z89 F../src/rtl/ALU/mul_s.v
 L0 3
@@ -271,11 +271,11 @@ R11
 o-O0
 vmul_u
 !i10b 1
-Z90 !s100 aBcQE1WzD^_iCe]F>?DjA3
-Z91 I;k=3M9jVBYgk`d>_OBVKz2
+Z90 !s100 gTV;>MfXJo>g=>J[>QUQc2
+Z91 IWc:WaS`f^W1fm;9Rhh>1<1
 Z92 VBI014<]CA1Q=hLGOh@DYk2
 R4
-Z93 w1691558436
+Z93 w1692754153
 Z94 8../src/rtl/ALU/mul_u.v
 Z95 F../src/rtl/ALU/mul_u.v
 L0 3
@@ -309,11 +309,11 @@ R11
 o-O0
 vtestbench
 !i10b 1
-!s100 TO3MN9Fh]7k<>gNR[3W^02
-I[?]9M;lJ1WID]c8`bTJi70
+!s100 W@9E9h1I;k;elRnOLG77_0
+IXk6bUZmT8oRUBBl8niYKX1
 Z102 VhGfW:390DM[oDMzegDH9`2
 R4
-w1692258104
+w1692754738
 Z103 8../testbench/testbench.v
 Z104 F../testbench/testbench.v
 L0 4
@@ -328,11 +328,11 @@ R11
 o-O0
 vtop
 !i10b 1
-Z105 !s100 a:lbE>mXO4>U=4]QUV:990
-Z106 IM[CG^[:Oe^=gzCBa7J;=B0
+Z105 !s100 MEcj=UYNAjbc>0KgD<RGL2
+Z106 I67f1_WQkTb_j0iAnzO;mK3
 Z107 V8Y;IXPLeMO`59k;:P7OTG3
 R4
-Z108 w1691993593
+Z108 w1692696102
 Z109 8../src/rtl/top.v
 Z110 F../src/rtl/top.v
 L0 2
@@ -347,11 +347,11 @@ R11
 o-O0
 vtx
 !i10b 1
-Z111 !s100 5R4HHiM<hMj`GYWkKSi7I0
-Z112 IUOFL_][aInTV[CYdZFhYT3
-Z113 Vf=n0mZiJe@:bMZlm87;h:3
+Z111 !s100 T0dF`A]bZnIQH4mV?^lGO3
+Z112 I;8l;^Na<Oc9ReUDJ_[[7O2
+Z113 V=7I15bPS]CDU7M9Ri=78N0
 R4
-Z114 w1691642958
+Z114 w1692679898
 Z115 8../src/rtl/UART/tx.v
 Z116 F../src/rtl/UART/tx.v
 L0 2
@@ -366,11 +366,11 @@ R11
 o-O0
 vuart
 !i10b 1
-Z117 !s100 fnONikoZY[a1l`k@SK;h32
-Z118 I6L19bLCmhVnY:ZbT3Dko<3
-Z119 V_C[7gco2>Q]XP7`R`496o1
+Z117 !s100 <P>gUji^6I@d^@U968_@g2
+Z118 IS^FK]OPdeol@47McYO`io2
+Z119 VDcgGVR=]Pj]ZJT4:kK;S03
 R4
-Z120 w1691998611
+Z120 w1692679851
 Z121 8../src/rtl/UART/uart.v
 Z122 F../src/rtl/UART/uart.v
 L0 2

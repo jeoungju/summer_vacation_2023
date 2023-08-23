@@ -1,4 +1,5 @@
-Info (10281): Verilog HDL Declaration information at encorder.v(10): object "uart_valid" differs only in case from object "UART_VALID" in the same scope
+Info (10281): Verilog HDL Declaration information at divider_s.v(7): object "Q" differs only in case from object "q" in the same scope
+Info (10281): Verilog HDL Declaration information at encorder.v(11): object "uart_valid" differs only in case from object "UART_VALID" in the same scope
 Info (10281): Verilog HDL Declaration information at mul_u.v(7): object "Q" differs only in case from object "q" in the same scope
 Info (10281): Verilog HDL Declaration information at mul_s.v(7): object "Q" differs only in case from object "q" in the same scope
 Info (10281): Verilog HDL Declaration information at divider_u.v(7): object "Q" differs only in case from object "q" in the same scope

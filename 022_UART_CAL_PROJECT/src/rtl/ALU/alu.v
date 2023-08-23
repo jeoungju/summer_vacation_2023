@@ -33,7 +33,12 @@ module alu (
     assign div_start_u = ((op_s == 5'h08) && (dtype_s == 4'h1)) ? 1'b1 : 1'b0;
     assign div_start_s = ((op_s == 5'h08) && (dtype_s == 4'h2)) ? 1'b1 : 1'b0;
 
-    wire different;
+    wire mul_start_u;
+    wire mul_start_s;
+    assign mul_start_u = ((op_s == 5'h04) && (dtype_s == 4'h1)) ? 1'b1 : 1'b0;
+    assign mul_start_s = ((op_s == 5'h04) && (dtype_s == 4'h2)) ? 1'b1 : 1'b0;
+
+    wire different; //for divider
     assign different = (src1[15] == src2[15]) ? 1'b0 : 1'b1;
 
     reg [31:0] result_d;

@@ -6,6 +6,7 @@ entity encorder is
         n_rst           : in     vl_logic;
         alu_done        : in     vl_logic;
         result          : in     vl_logic_vector(31 downto 0);
+        tx_done         : in     vl_logic;
         uart_out        : out    vl_logic_vector(7 downto 0);
         uart_valid      : out    vl_logic
     );
