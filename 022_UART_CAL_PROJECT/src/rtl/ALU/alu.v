@@ -1,3 +1,4 @@
+//Hex cal alu module
 `timescale 1ps/1ps
 module alu (
     input clk,

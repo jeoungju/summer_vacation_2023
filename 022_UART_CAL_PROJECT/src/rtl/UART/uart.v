@@ -1,3 +1,4 @@
+// Uart top module
 `timescale 1ps/1ps
 module uart (
     input clk,

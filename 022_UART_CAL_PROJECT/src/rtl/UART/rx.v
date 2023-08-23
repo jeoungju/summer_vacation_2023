@@ -1,3 +1,4 @@
+//Uart rx module
 `timescale 1ps/1ps
 module rx(
     input clk,

@@ -1,4 +1,4 @@
-//Non-storing 16bits unsigned divider
+//Non-storing 16bits signed divider
 `timescale 1ps/1ps
 module divider_s (
     input clk,

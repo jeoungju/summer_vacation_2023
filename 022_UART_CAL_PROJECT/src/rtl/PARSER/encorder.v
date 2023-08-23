@@ -1,3 +1,4 @@
+// Hex cal encorder module
 `timescale 1ps/1ps
 module encorder (
     input clk,

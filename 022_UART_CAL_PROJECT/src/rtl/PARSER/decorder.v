@@ -1,4 +1,4 @@
-// Uart decorder module
+// Hex cal decorder module
 `timescale 1ps/1ps
 module decorder (
     input clk,
